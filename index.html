@@ -19,8 +19,7 @@
    .active-link::after {
      content: '';
      position: absolute;
-     left: 50%;
-     transform: translateX(-50%);
+     left: 0;
      bottom: -4px; /* Adjust this value to add space between the text and the underline */
      width: 50%; /* This makes the underline half the length of the text */
      height: 2px; /* Adjust the thickness of the underline */
@@ -34,7 +33,10 @@
  <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
   <header class="bg-white shadow-md">
    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
+    <div class="flex items-center">
+     <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
+     <span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span>
+    </div>
     <nav class="hidden md:flex space-x-4">
      <a class="text-gray-600 hover:text-gray-800 active-link" href="index.html">
       Home
@@ -119,7 +121,7 @@
        Join the first Southern Regional Round Oratory Championship, the most anticipated.
       </p>
       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
-       Learn More
+       Join Now
       </button>
      </div>
      <div class="bg-white p-4 rounded-lg shadow-md">

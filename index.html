@@ -1,252 +1,161 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Oratory League
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <style>
-   .click-effect:active {
-     transform: scale(0.95);
-   }
-   .active-link {
-     position: relative;
-   }
-   .active-link::after {
-     content: '';
-     position: absolute;
-     left: 0;
-     bottom: -4px; /* Adjust this value to add space between the text and the underline */
-     width: 50%; /* This makes the underline half the length of the text */
-     height: 2px; /* Adjust the thickness of the underline */
-     background-color: #ae8300;
-   }
-   body {
-     font-family: 'Product Sans', sans-serif;
-   }
-  </style>
- </head>
- <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
-  <header class="bg-white shadow-md">
-   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center">
-     <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
-     <span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Oratory League</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        .click-effect:active {
+            transform: scale(0.95);
+        }
+        .active-link {
+            position: relative;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px; /* Adjust this value to add space between the text and the underline */
+            width: 50%; /* This makes the underline half the length of the text */
+            height: 2px; /* Adjust the thickness of the underline */
+            background-color: #ae8300;
+        }
+        body {
+            font-family: 'Product Sans', sans-serif;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+    </style>
+</head>
+<body class="font-roboto" style="background-color: rgba(244,237,218,255);">
+    <div class="sticky-nav bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
+                <span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
+                <a class="text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+                <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+        </nav>
     </div>
-    <nav class="hidden md:flex space-x-4">
-     <a class="text-gray-600 hover:text-gray-800 active-link" href="index.html">
-      Home
-     </a>
-     <a class="text-gray-600 hover:text-gray-800" href="about-us.html">
-      About Us
-     </a>
-     <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">
-      Contact Us
-     </a>
-    </nav>
-    <div class="md:hidden">
-     <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
-      <i class="fas fa-bars">
-      </i>
-     </button>
-    </div>
-   </div>
-   <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="index.html">
-     Home
-    </a>
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="explore.html">
-     Explore
-    </a>
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="my-league.html">
-     My League
-    </a>
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="community.html">
-     Community
-    </a>
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="governance.html">
-     Governance
-    </a>
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="notifications.html">
-     Notifications
-    </a>
-   </nav>
-  </header>
-  <main class="container mx-auto px-4 py-8">
-   <section class="mb-8">
-    <img alt="2024 ORATE AFRICA DELEGATION" class="w-full h-64 object-cover rounded-lg mb-4" src="home-banner.png"/>
-    <h2 class="text-3xl font-bold text-gray-800 mb-4">
-     Welcome to Oratory League
-    </h2>
-    <p class="text-gray-600">
-     Empowering debaters worldwide through education, competition, and global networking. We are striving towards advancing debate and oratory into legislative literature.
-    </p>
-   </section>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">
-     Upcoming Events
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="OLC Leg 1" class="w-full h-40 object-cover rounded-lg mb-4" src="OLC Leg 1.png"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       OLC Leg 1
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Join the upcoming North East Regional Oratory Championship.
-      </p>
-      <a href="register.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
-       Register Now
-      </button></a>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="OLC Leg 2" class="w-full h-40 object-cover rounded-lg mb-4" src="OLC Leg 2.png"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       OLC Leg 2
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Join the first Southern Regional Round Oratory Championship, the most anticipated.
-      </p>
-      <a href="olc-leg2.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
-       Learn More
-      </button></a>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Entrance Exam" class="w-full h-40 object-cover rounded-lg mb-4" src="exam.png"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       Debate Recruitment Event
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Connect with the league and seize the opportunity to become an orate delegate for the league.
-      </p>
-      <a href="debate-entrance.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
-       Register for Exam
-      </button></a>
-     </div>
-    </div>
-   </section>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">
-     Top Debaters
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-     <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
-      <img alt="Ms. Siolwe" class="w-16 h-16 object-cover rounded-full mr-4" src="siolwe.jpg"/>
-      <div>
-       <h3 class="text-xl font-bold text-gray-800">
-        Gracious Theresa Siolwe
-       </h3>
-       <p class="text-gray-600">
-        Rank #1
-       </p>
-      </div>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
-      <img alt="Mr. Baaitse" class="w-16 h-16 object-cover rounded-full mr-4" src="baaitse.jpg"/>
-      <div>
-       <h3 class="text-xl font-bold text-gray-800">
-        Leatile King Baaitse
-       </h3>
-       <p class="text-gray-600">
-        Rank #2
-       </p>
-      </div>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
-      <img alt="Mr. Modala" class="w-16 h-16 object-cover rounded-full mr-4" src="modala.jpg"/>
-      <div>
-       <h3 class="text-xl font-bold text-gray-800">
-        Asante Aupa Modala
-       </h3>
-       <p class="text-gray-600">
-        Rank #3
-       </p>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">
-     Latest News
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Some of the Orate Africa Delegates" class="w-full h-40 object-cover rounded-lg mb-4" src="delegation.jpg"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       2024 Orate Africa Championships
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Get insight about the past Homecoming Championship recently held this past December at the University of Botswana.
-      </p>
-      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
-       Read More
-      </button>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Ms. Siolwe (left), Mr. Baaitse (right)" class="w-full h-40 object-cover rounded-lg mb-4" src="cambridge.png"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       African Champions
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Catch on the Oratory League Delegation that was selected the best African Debate team, that is set to represent the continent of Africa at the Cambridge Union.
-      </p>
-      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
-       Read More
-      </button>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Mr. Khan" class="w-full h-40 object-cover rounded-lg mb-4" src="mr khan.jpg"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       Leave of the CS
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Learn more about the year-long leave of the Chief of Staff (CS) who is pursuing his final BSSE studies.
-      </p>
-      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
-       Read More
-      </button>
-     </div>
-    </div>
-   </section>
-  </main>
-  <footer class="bg-white shadow-md mt-8">
-   <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-    <p class="text-[#ae8300] mb-4 md:mb-0">
-     © 2025 Oratory League. All rights reserved.
-    </p>
-    <div class="space-x-4">
-     <a class="text-[#ae8300] hover:text-gray-800" href="#">
-      <i class="fab fa-facebook-f">
-      </i>
-     </a>
-     <a class="text-[#ae8300] hover:text-gray-800" href="#">
-      <i class="fab fa-twitter">
-      </i>
-     </a>
-     <a class="text-[#ae8300] hover:text-gray-800" href="#">
-      <i class="fab fa-instagram">
-      </i>
-     </a>
-     <a class="text-[#ae8300] hover:text-gray-800" href="#">
-      <i class="fab fa-linkedin-in">
-      </i>
-     </a>
-    </div>
-   </div>
-  </footer>
-  <script>
-   document.getElementById('menu-button').addEventListener('click', function() {
-     var menu = document.getElementById('mobile-menu');
-     if (menu.classList.contains('hidden')) {
-       menu.classList.remove('hidden');
-     } else {
-       menu.classList.add('hidden');
-     }
-   });
-  </script>
- </body>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-8">
+            <img alt="2024 ORATE AFRICA DELEGATION" class="w-full h-64 object-cover rounded-lg mb-4" src="home-banner.png"/>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to Oratory League</h2>
+            <p class="text-gray-600">Empowering debaters worldwide through education, competition, and global networking. We are striving towards advancing debate and oratory into legislative literature.</p>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Upcoming Events</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="OLC Leg 1" class="w-full h-40 object-cover rounded-lg mb-4" src="OLC Leg 1.png"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">OLC Leg 1</h3>
+                    <p class="text-gray-600 mb-2">Join the upcoming North East Regional Oratory Championship.</p>
+                    <a href="register.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Register Now</button></a>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="OLC Leg 2" class="w-full h-40 object-cover rounded-lg mb-4" src="OLC Leg 2.png"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">OLC Leg 2</h3>
+                    <p class="text-gray-600 mb-2">Join the first Southern Regional Round Oratory Championship, the most anticipated.</p>
+                    <a href="olc-leg2.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Learn More</button></a>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Entrance Exam" class="w-full h-40 object-cover rounded-lg mb-4" src="exam.png"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Debate Recruitment Event</h3>
+                    <p class="text-gray-600 mb-2">Connect with the league and seize the opportunity to become an orate delegate for the league.</p>
+                    <a href="debate-entrance.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Register for Exam</button></a>
+                </div>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Top Debaters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                    <img alt="Ms. Siolwe" class="w-16 h-16 object-cover rounded-full mr-4" src="siolwe.jpg"/>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Gracious Theresa Siolwe</h3>
+                        <p class="text-gray-600">Rank #1</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                    <img alt="Mr. Baaitse" class="w-16 h-16 object-cover rounded-full mr-4" src="baaitse.jpg"/>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Leatile King Baaitse</h3>
+                        <p class="text-gray-600">Rank #2</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                    <img alt="Mr. Modala" class="w-16 h-16 object-cover rounded-full mr-4" src="modala.jpg"/>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Asante Aupa Modala</h3>
+                        <p class="text-gray-600">Rank #3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Latest News</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Some of the Orate Africa Delegates" class="w-full h-40 object-cover rounded-lg mb-4" src="delegation.jpg"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">2024 Orate Africa Championships</h3>
+                    <p class="text-gray-600 mb-2">Get insight about the past Homecoming Championship recently held this past December at the University of Botswana.</p>
+                    <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Read More</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Ms. Siolwe (left), Mr. Baaitse (right)" class="w-full h-40 object-cover rounded-lg mb-4" src="cambridge.png"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">African Champions</h3>
+                    <p class="text-gray-600 mb-2">Catch on the Oratory League Delegation that was selected the best African Debate team, that is set to represent the continent of Africa at the Cambridge Union.</p>
+                    <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Read More</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Mr. Khan" class="w-full h-40 object-cover rounded-lg mb-4" src="mr khan.jpg"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Leave of the CS</h3>
+                    <p class="text-gray-600 mb-2">Learn more about the year-long leave of the Chief of Staff (CS) who is pursuing his final BSSE studies.</p>
+                    <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Read More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white shadow-md mt-8">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory League. All rights reserved.</p>
+            <div class="space-x-4">
+                <a class="text-[#ae8300] hover:text-gray-800" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
 </html>

@@ -31,6 +31,32 @@
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             text-align: center;
+            animation: fadeInOut 6s infinite;
+        }
+        .header-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            animation: textGlow 3s infinite alternate;
+        }
+        .header-content p {
+            font-size: 1.5rem;
+            animation: fadeInOut 6s infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            }
         }
         ul.list-disc li {
             animation: fadeIn 0.8s ease;
@@ -64,8 +90,8 @@
 <body>
     <header>
         <div class="header-content">
-            <h1 class="text-4xl font-bold">OLC Leg 2 - Learn More</h1>
-            <p class="mt-2 text-lg">Explore the thrilling Southern Regional Championship</p>
+            <h1>OLC Leg 2 - Learn More</h1>
+            <p>Explore the thrilling Southern Regional Championship</p>
         </div>
     </header>
     <main class="container mx-auto px-4 py-8">

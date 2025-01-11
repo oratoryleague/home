@@ -35,23 +35,9 @@
         .header-content h1 {
             font-size: 3rem;
             font-weight: bold;
-            animation: typing 3.5s steps(40, end) infinite alternate;
             white-space: nowrap;
             overflow: hidden;
             border-right: 2px solid #ae8300;
-        }
-        @keyframes typing {
-            0% { content: 'Welcome to'; width: 0; }
-            10% { content: 'Oratory League Championships Leg 2'; width: 50%; }
-            20% { content: 'Southern Region\'s Biggest Championship'; width: 50%; }
-            30% { content: 'The Most Wanted'; width: 50%; }
-            40% { content: 'Greatest Award Recognition'; width: 50%; }
-            50% { content: 'Debate'; width: 50%; }
-            60% { content: 'Public Speaking'; width: 50%; }
-            70% { content: 'Moot Court'; width: 50%; }
-            80% { content: 'Spelling Bee'; width: 50%; }
-            90% { content: 'Quiz'; width: 50%; }
-            100% { content: 'Poetry, Theatre, Promotional Oratory'; width: 50%; }
         }
         ul.list-disc li {
             animation: fadeIn 0.8s ease;
@@ -85,7 +71,7 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>Oratory League Championships Leg 2</h1>
+            <h1 id="animated-text">Oratory League Championships Leg 2</h1>
         </div>
     </header>
     <main class="container mx-auto px-4 py-8">
@@ -124,5 +110,33 @@
             <p class="text-[#ae8300]">© 2025 Oratory League. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        const texts = [
+            "Oratory League Championships Leg 2",
+            "Southern Region's Biggest Championship",
+            "The Most Wanted",
+            "Greatest Award Recognition",
+            "Debate",
+            "Public Speaking",
+            "Moot Court",
+            "Spelling Bee",
+            "Quiz",
+            "Poetry",
+            "Theatre",
+            "Promotional Oratory",
+            "Welcome to"
+        ];
+
+        let index = 0;
+        const textElement = document.getElementById("animated-text");
+
+        function typeText() {
+            textElement.textContent = texts[index];
+            index = (index + 1) % texts.length;
+            setTimeout(typeText, 6500);
+        }
+
+        typeText();
+    </script>
 </body>
 </html>

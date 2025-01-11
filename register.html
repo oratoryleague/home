@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Oratory League</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <img src="logo.png" alt="Oratory League Logo" class="h-10">
+            <h1 class="text-[#ae8300] text-xl font-bold">Register for OLC Leg 1</h1>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Event Registration</h2>
+        <form class="bg-white p-8 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="name">Full Name</label>
+                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="email">Email Address</label>
+                <input class="w-full px-4 py-2 border rounded-lg" type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="region">Region</label>
+                <select class="w-full px-4 py-2 border rounded-lg" id="region" required>
+                    <option value="north-east">North East</option>
+                    <option value="south">South</option>
+                    <option value="central">Central</option>
+                </select>
+            </div>
+            <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect" type="submit">Register</button>
+        </form>
+    </main>
+    <footer class="bg-white shadow-md mt-8">
+        <div class="container mx-auto px-4 py-4 flex justify-between">
+            <p class="text-[#ae8300]">© 2025 Oratory League. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

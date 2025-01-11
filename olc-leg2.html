@@ -35,9 +35,6 @@
         .header-content h1 {
             font-size: 3rem;
             font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 2px solid #ae8300;
         }
         ul.list-disc li {
             animation: fadeIn 0.8s ease;
@@ -71,7 +68,7 @@
 <body>
     <header>
         <div class="header-content">
-            <h1 id="animated-text">Oratory League Championships Leg 2</h1>
+            <h1>Oratory League Championships Leg 2</h1>
         </div>
     </header>
     <main class="container mx-auto px-4 py-8">
@@ -110,33 +107,5 @@
             <p class="text-[#ae8300]">© 2025 Oratory League. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        const texts = [
-            "Oratory League Championships Leg 2",
-            "Southern Region's Biggest Championship",
-            "The Most Wanted",
-            "Greatest Award Recognition",
-            "Debate",
-            "Public Speaking",
-            "Moot Court",
-            "Spelling Bee",
-            "Quiz",
-            "Poetry",
-            "Theatre",
-            "Promotional Oratory",
-            "Welcome to"
-        ];
-
-        let index = 0;
-        const textElement = document.getElementById("animated-text");
-
-        function typeText() {
-            textElement.textContent = texts[index];
-            index = (index + 1) % texts.length;
-            setTimeout(typeText, 6500);
-        }
-
-        typeText();
-    </script>
 </body>
 </html>

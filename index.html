@@ -1,0 +1,259 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Oratory League
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .click-effect:active {
+     transform: scale(0.95);
+   }
+   .active-link {
+     position: relative;
+   }
+   .active-link::after {
+     content: '';
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     bottom: -4px; /* Adjust this value to add space between the text and the underline */
+     width: 50%; /* This makes the underline half the length of the text */
+     height: 2px; /* Adjust the thickness of the underline */
+     background-color: #ae8300;
+   }
+   body {
+     font-family: 'Product Sans', sans-serif;
+   }
+  </style>
+ </head>
+ <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
+  <header class="bg-white shadow-md">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
+    <nav class="hidden md:flex space-x-4">
+     <a class="text-gray-600 hover:text-gray-800 active-link" href="index.html">
+      Home
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="explore.html">
+      Explore
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="my-league.html">
+      My League
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="community.html">
+      Community
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="governance.html">
+      Governance
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="notifications.html">
+      Notifications
+     </a>
+    </nav>
+    <div class="md:hidden">
+     <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+   </div>
+   <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="index.html">
+     Home
+    </a>
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="explore.html">
+     Explore
+    </a>
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="my-league.html">
+     My League
+    </a>
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="community.html">
+     Community
+    </a>
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="governance.html">
+     Governance
+    </a>
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="notifications.html">
+     Notifications
+    </a>
+   </nav>
+  </header>
+  <main class="container mx-auto px-4 py-8">
+   <section class="mb-8">
+    <img alt="2024 ORATE AFRICA DELEGATION" class="w-full h-64 object-cover rounded-lg mb-4" src="home-banner.png"/>
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+     Welcome to Oratory League
+    </h2>
+    <p class="text-gray-600">
+     Empowering debaters worldwide through education, competition, and global networking.
+    </p>
+   </section>
+   <section class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+     Upcoming Events
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Image of a debate competition event with participants on stage" class="w-full h-40 object-cover rounded-lg mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">
+       International Debate Championship
+      </h3>
+      <p class="text-gray-600 mb-2">
+       Join the global stage and showcase your debating skills.
+      </p>
+      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
+       Register Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Image of a masterclass session with a mentor speaking to an audience" class="w-full h-40 object-cover rounded-lg mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">
+       Masterclass with Expert Mentor
+      </h3>
+      <p class="text-gray-600 mb-2">
+       Learn from the best in the field with our exclusive masterclass.
+      </p>
+      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
+       Join Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Image of a debate club meeting with members discussing" class="w-full h-40 object-cover rounded-lg mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">
+       Local Debate Club Meetup
+      </h3>
+      <p class="text-gray-600 mb-2">
+       Connect with local debaters and exchange ideas.
+      </p>
+      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
+       RSVP
+      </button>
+     </div>
+    </div>
+   </section>
+   <section class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+     Top Debaters
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+      <img alt="Profile picture of top debater John Doe" class="w-16 h-16 object-cover rounded-full mr-4" src="https://placehold.co/100x100"/>
+      <div>
+       <h3 class="text-xl font-bold text-gray-800">
+        John Doe
+       </h3>
+       <p class="text-gray-600">
+        Rank #1
+       </p>
+      </div>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+      <img alt="Profile picture of top debater Jane Smith" class="w-16 h-16 object-cover rounded-full mr-4" src="https://placehold.co/100x100"/>
+      <div>
+       <h3 class="text-xl font-bold text-gray-800">
+        Jane Smith
+       </h3>
+       <p class="text-gray-600">
+        Rank #2
+       </p>
+      </div>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+      <img alt="Profile picture of top debater Alex Johnson" class="w-16 h-16 object-cover rounded-full mr-4" src="https://placehold.co/100x100"/>
+      <div>
+       <h3 class="text-xl font-bold text-gray-800">
+        Alex Johnson
+       </h3>
+       <p class="text-gray-600">
+        Rank #3
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+     Latest News
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Image of a recent debate event with participants on stage" class="w-full h-40 object-cover rounded-lg mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">
+       Debate Event Highlights
+      </h3>
+      <p class="text-gray-600 mb-2">
+       Catch up on the latest highlights from our recent debate event.
+      </p>
+      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
+       Read More
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Image of a new debate course with participants learning" class="w-full h-40 object-cover rounded-lg mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">
+       New Debate Course Launched
+      </h3>
+      <p class="text-gray-600 mb-2">
+       Enroll in our newly launched course to enhance your debating skills.
+      </p>
+      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
+       Enroll Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Image of a scholarship announcement with students celebrating" class="w-full h-40 object-cover rounded-lg mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">
+       Scholarship Opportunities
+      </h3>
+      <p class="text-gray-600 mb-2">
+       Explore new scholarship opportunities for aspiring debaters.
+      </p>
+      <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">
+       Apply Now
+      </button>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-white shadow-md mt-8">
+   <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+    <p class="text-[#ae8300] mb-4 md:mb-0">
+     © 2025 Oratory League. All rights reserved.
+    </p>
+    <div class="space-x-4">
+     <a class="text-[#ae8300] hover:text-gray-800" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="text-[#ae8300] hover:text-gray-800" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-[#ae8300] hover:text-gray-800" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a class="text-[#ae8300] hover:text-gray-800" href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+     var menu = document.getElementById('mobile-menu');
+     if (menu.classList.contains('hidden')) {
+       menu.classList.remove('hidden');
+     } else {
+       menu.classList.add('hidden');
+     }
+   });
+  </script>
+ </body>
+</html>

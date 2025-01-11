@@ -45,15 +45,19 @@
         <form class="bg-white p-8 rounded-lg shadow-md" action="mailto:exam@oratoryleague.com" method="post" enctype="text/plain">
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="name">Full Name</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="name" name="Full Name" placeholder="Enter your name" required>
+                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="name" name="Full Name" placeholder="Enter your full name" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="email">Email Address</label>
                 <input class="w-full px-4 py-2 border rounded-lg" type="email" id="email" name="Email Address" placeholder="Enter your email" required>
             </div>
             <div class="mb-4">
-                <label class="block text-gray-700 font-bold mb-2" for="school">School Name</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="school" name="School Name" placeholder="Enter your school name" required>
+                <label class="block text-gray-700 font-bold mb-2" for="participants">Phone Number</label>
+                <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" name="Number of Participants" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="school">Institution's/Employer's Name</label>
+                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="school" name="School Name" placeholder="Enter your school's/employer's name" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="education-level">Education Level</label>
@@ -61,11 +65,13 @@
                     <option value="Primary School">Primary School</option>
                     <option value="Junior School">Junior School</option>
                     <option value="Senior School">Senior School</option>
+                    <option value="Senior School">Tertiary Education</option>
+                    <option value="Senior School">Working Class</option>
                 </select>
             </div>
             <div class="mb-4">
-                <label class="block text-gray-700 font-bold mb-2" for="participants">Number of Participants</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" name="Number of Participants" placeholder="Enter number of participants" required>
+                <label class="block text-gray-700 font-bold mb-2" for="participants">Age (Years)</label>
+                <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" name="Number of Participants" placeholder="Enter your age" required>
             </div>
             <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg hover:bg-[#965f00]" type="submit">Submit Application</button>
         </form>

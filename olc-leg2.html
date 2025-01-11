@@ -18,13 +18,19 @@
             background-image: url('scenic-cover.jpg');
             background-size: cover;
             background-position: center;
+            width: 100%;
+            height: 100vh;
             color: white;
             text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .header-content {
             backdrop-filter: blur(5px);
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
+            text-align: center;
         }
         ul.list-disc li {
             animation: fadeIn 0.8s ease;
@@ -53,27 +59,11 @@
             transform: scale(1.05);
             background-color: #965f00;
         }
-        .fancy-object {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-            margin: auto;
-            border-radius: 50%;
-            animation: rotate 4s linear infinite;
-        }
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
     </style>
 </head>
 <body>
-    <header class="h-64 flex items-center justify-center">
-        <div class="header-content text-center">
+    <header>
+        <div class="header-content">
             <h1 class="text-4xl font-bold">OLC Leg 2 - Learn More</h1>
             <p class="mt-2 text-lg">Explore the thrilling Southern Regional Championship</p>
         </div>
@@ -104,16 +94,9 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">3D Highlights</h2>
-            <div class="flex justify-center items-center mb-4">
-                <div class="fancy-object"></div>
-            </div>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Register Now</h2>
-            <p class="text-gray-600 mb-4">Secure your spot at OLC Leg 2 by completing the registration process. Don’t miss this chance to be part of the action!</p>
-            <a href="register.html" class="bg-[#ae8300] text-white px-4 py-2 rounded-lg animated-button">Register for OLC Leg 2</a>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Back to Home</h2>
+            <p class="text-gray-600 mb-4">Return to the homepage to explore more about the Oratory League and its events.</p>
+            <a href="index.html" class="bg-[#ae8300] text-white px-4 py-2 rounded-lg animated-button">Go Back to Home</a>
         </section>
     </main>
     <footer class="bg-white shadow-md">

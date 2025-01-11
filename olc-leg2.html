@@ -7,33 +7,75 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html {
-            min-height: 100%;
-            position: relative;
-        }
         body {
+            font-family: 'Product Sans', sans-serif;
             margin: 0;
-            padding-bottom: 80px;
+            padding: 0;
             box-sizing: border-box;
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
+            background-color: #f4f4f4;
         }
-        main {
-            flex: 1;
+        header {
+            background-image: url('scenic-cover.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+        .header-content {
+            backdrop-filter: blur(5px);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        ul.list-disc li {
+            animation: fadeIn 0.8s ease;
+            margin-bottom: 8px;
+        }
+        ul.list-disc li:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+        ul.list-disc li:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animated-button {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .animated-button:hover {
+            transform: scale(1.05);
+            background-color: #965f00;
+        }
+        .fancy-object {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            margin: auto;
+            border-radius: 50%;
+            animation: rotate 4s linear infinite;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
-<body class="font-roboto bg-gray-100">
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <img src="logo.png" alt="Oratory League Logo" class="h-10">
-            <h1 class="text-[#ae8300] text-xl font-bold">OLC Leg 2 - Learn More</h1>
+<body>
+    <header class="h-64 flex items-center justify-center">
+        <div class="header-content text-center">
+            <h1 class="text-4xl font-bold">OLC Leg 2 - Learn More</h1>
+            <p class="mt-2 text-lg">Explore the thrilling Southern Regional Championship</p>
         </div>
     </header>
     <main class="container mx-auto px-4 py-8">
@@ -62,9 +104,16 @@
         </section>
 
         <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">3D Highlights</h2>
+            <div class="flex justify-center items-center mb-4">
+                <div class="fancy-object"></div>
+            </div>
+        </section>
+
+        <section class="mb-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Register Now</h2>
             <p class="text-gray-600 mb-4">Secure your spot at OLC Leg 2 by completing the registration process. Don’t miss this chance to be part of the action!</p>
-            <a href="register.html" class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Register for OLC Leg 2</a>
+            <a href="register.html" class="bg-[#ae8300] text-white px-4 py-2 rounded-lg animated-button">Register for OLC Leg 2</a>
         </section>
     </main>
     <footer class="bg-white shadow-md">

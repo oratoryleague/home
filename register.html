@@ -6,6 +6,28 @@
     <title>Register - Oratory League</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            min-height: 100%;
+            position: relative;
+        }
+        body {
+            margin: 0;
+            padding-bottom: 80px; /* Height of the footer */
+            box-sizing: border-box;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body class="font-roboto bg-gray-100">
     <header class="bg-white shadow-md">
@@ -15,28 +37,46 @@
         </div>
     </header>
     <main class="container mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Event Registration</h2>
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-3xl font-bold text-gray-800">Event Registration</h2>
+            <a href="index.html" class="text-[#ae8300] hover:text-gray-800">&larr; Back</a>
+        </div>
         <form class="bg-white p-8 rounded-lg shadow-md">
             <div class="mb-4">
-                <label class="block text-gray-700 font-bold mb-2" for="name">Full Name</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="name" placeholder="Enter your name" required>
+                <label class="block text-gray-700 font-bold mb-2" for="school">School Name</label>
+                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="school" placeholder="Enter school name" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="education-level">Education Level</label>
+                <select class="w-full px-4 py-2 border rounded-lg" id="education-level" required>
+                    <option value="primary">Primary School</option>
+                    <option value="junior">Junior School</option>
+                    <option value="senior">Senior School</option>
+                </select>
+            </div>
+             <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="form-of-payment">Form of Payment</label>
+                <select class="w-full px-4 py-2 border rounded-lg" id="education-level" required>
+                    <option value="primary">Cash</option>
+                    <option value="junior">Bank Deposit</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="head">Head of Delegation</label>
+                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="head" placeholder="Enter head of delegation" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="email">Email Address</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="email" id="email" placeholder="Enter your email" required>
+                <input class="w-full px-4 py-2 border rounded-lg" type="email" id="email" placeholder="Enter email address" required>
             </div>
             <div class="mb-4">
-                <label class="block text-gray-700 font-bold mb-2" for="region">Region</label>
-                <select class="w-full px-4 py-2 border rounded-lg" id="region" required>
-                    <option value="north-east">North East</option>
-                    <option value="south">South</option>
-                    <option value="central">Central</option>
-                </select>
+                <label class="block text-gray-700 font-bold mb-2" for="participants">Number of Participants</label>
+                <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" placeholder="Enter number of participants" required>
             </div>
             <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect" type="submit">Register</button>
         </form>
     </main>
-    <footer class="bg-white shadow-md mt-8">
+    <footer class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between">
             <p class="text-[#ae8300]">© 2025 Oratory League. All rights reserved.</p>
         </div>

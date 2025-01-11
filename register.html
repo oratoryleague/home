@@ -27,6 +27,19 @@
             bottom: 0;
             width: 100%;
         }
+        .notification {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
     </style>
 </head>
 <body class="font-roboto bg-gray-100">
@@ -36,42 +49,38 @@
             <h1 class="text-[#ae8300] text-xl font-bold">Register for OLC Leg 1</h1>
         </div>
     </header>
+    <div id="notification" class="notification">
+        Registration details for OLC Leg 1 have been successfully sent!
+    </div>
     <main class="container mx-auto px-4 py-8">
         <div class="flex justify-between items-center mb-4">
             <h2 class="text-3xl font-bold text-gray-800">Event Registration</h2>
             <a href="index.html" class="text-[#ae8300] hover:text-gray-800">&larr; Back</a>
         </div>
-        <form class="bg-white p-8 rounded-lg shadow-md">
+        <form class="bg-white p-8 rounded-lg shadow-md" action="mailto:events@oratoryleague.com" method="post" enctype="text/plain" onsubmit="showNotification(event)">
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="school">School Name</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="school" placeholder="Enter school name" required>
+                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="school" name="School Name" placeholder="Enter school name" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="education-level">Education Level</label>
-                <select class="w-full px-4 py-2 border rounded-lg" id="education-level" required>
-                    <option value="primary">Primary School</option>
-                    <option value="junior">Junior School</option>
-                    <option value="senior">Senior School</option>
-                </select>
-            </div>
-             <div class="mb-4">
-                <label class="block text-gray-700 font-bold mb-2" for="form-of-payment">Form of Payment</label>
-                <select class="w-full px-4 py-2 border rounded-lg" id="education-level" required>
-                    <option value="primary">Cash</option>
-                    <option value="junior">Bank Deposit</option>
+                <select class="w-full px-4 py-2 border rounded-lg" id="education-level" name="Education Level" required>
+                    <option value="Primary School">Primary School</option>
+                    <option value="Junior School">Junior School</option>
+                    <option value="Senior School">Senior School</option>
                 </select>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="head">Head of Delegation</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="head" placeholder="Enter head of delegation" required>
+                <input class="w-full px-4 py-2 border rounded-lg" type="text" id="head" name="Head of Delegation" placeholder="Enter head of delegation" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="email">Email Address</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="email" id="email" placeholder="Enter email address" required>
+                <input class="w-full px-4 py-2 border rounded-lg" type="email" id="email" name="Email Address" placeholder="Enter email address" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="participants">Number of Participants</label>
-                <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" placeholder="Enter number of participants" required>
+                <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" name="Number of Participants" placeholder="Enter number of participants" required>
             </div>
             <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect" type="submit">Register</button>
         </form>
@@ -81,5 +90,17 @@
             <p class="text-[#ae8300]">© 2025 Oratory League. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        function showNotification(event) {
+            event.preventDefault();
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000);
+            // Optionally, you can add logic to process the form after showing the notification
+            event.target.submit();
+        }
+    </script>
 </body>
 </html>

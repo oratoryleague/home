@@ -1,17 +1,14 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   About Us - Oratory League
-  </title>
-  <link rel="icon" href="icon.png" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Oratory League</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
             font-family: 'Product Sans', sans-serif;
             margin: 0;
             padding: 0;
@@ -31,9 +28,9 @@
             content: '';
             position: absolute;
             left: 0;
-            bottom: -4px;
-            width: 50%;
-            height: 2px;
+            bottom: -2px; /* Adjust this value to add space between the text and the underline */
+            width: 25%; /* This makes the underline a quarter the length of the text */
+            height: 2px; /* Adjust the thickness of the underline */
             background-color: #ae8300;
         }
         .notification {
@@ -48,183 +45,127 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
-  </style>
- </head>
- <body>
-  <div class="sticky-nav bg-white shadow-md">
-   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center">
-     <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
-     <span class="text-[#ae8300] text-xl font-bold ml-2">
-      ORATORY LEAGUE
-     </span>
+    </style>
+</head>
+<body>
+    <div class="sticky-nav bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
+                <span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="text-gray-600 hover:text-gray-800" href="index.html">Home</a>
+                <a class="text-gray-600 hover:text-gray-800 active-link" href="about-us.html">About Us</a>
+                <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="index.html">Home</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="about-us.html">About Us</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+        </nav>
     </div>
-    <nav class="hidden md:flex space-x-4">
-     <a class="text-gray-600 hover:text-gray-800" href="index.html">
-      Home
-     </a>
-     <a class="text-gray-600 hover:text-gray-800 active-link" href="about-us.html">
-      About Us
-     </a>
-     <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">
-      Contact Us
-     </a>
-    </nav>
-    <div class="md:hidden">
-     <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
-      <i class="fas fa-bars">
-      </i>
-     </button>
+    <header class="relative w-full h-screen">
+        <img alt="A banner image" class="absolute inset-0 w-full h-full object-cover" src="about-us-banner.jpg"/>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-3xl font-bold text-gray-800">About Us</h2>
+            <a class="text-[#ae8300] hover:text-gray-800" href="index.html">← Back</a>
+        </div>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+            <p class="text-gray-600 mb-6">
+                At Oratory League, our mission is to empower orators worldwide through education, competition, and global networking. We strive to advance debate and oratory into legislative literature, fostering a community of skilled and confident speakers. We plan on elevating debate standards and empowering all members of the youth community. The Youth are the pivotal demographic of the economy, and as such, their talent must be nurtured. The power of speech can get you want. Oratory League aims at increasing the standards of orates and speaking skills for the members of the world economy. We embrace our principles of Unison, Elegance and Integrity!
+            </p>
+            <img alt="Our Mission Image" class="w-full h-64 object-cover rounded-lg mb-4" src="mission.jpg"/>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
+            <p class="text-gray-600 mb-6">
+                Our vision is to create an elegant, professional, and user-centric platform that facilitates debate education, competition management, global outreach, and career building in oratory and debate. We aim to reflect our journey of excellence, focus on innovation, and commitment to empowering debaters worldwide.
+                We envision a future where oratory shapes the economy in many constructs. Our organization plans 
+                on drawing up a comprehensive system of debate that is more efficient than the current judiciary 
+                system in solving and tackling legal cases. We give the world the liberation of choosing for their 
+                cases to be handled by either professional attorneys or professional debaters. It would mitigate the 
+                weight on the judicial processes, thus accelerating the rate at which the economy is served justice.
+                In doing so, we are developing a new curriculum and course to install into universities and tertiary 
+                institutions, allowing passionate debaters and orators around the world economy to enroll, study
+                and become professional debaters. We see it moot for candidates to win debate championships
+                and not be able to study such a course, whereas those who partake in moot court makes them fit to 
+                be lawyers. Our well-narrated system allows debaters to handle cases on strict parameters, 
+                proofing to yield more fairness and justice than the status quo of world standards.
+            </p>
+            <img alt="Our Vision Image" class="w-full h-64 object-cover rounded-lg mb-4" src="vision.jpg"/>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Team Member 1" class="w-full h-64 object-cover rounded-lg mb-4" src="baaitse.jpg"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Leatile King Baaitse</h3>
+                    <p class="text-gray-600 mb-2">President, Board-Chair, Acting CDO</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Team Member 2" class="w-full h-64 object-cover rounded-lg mb-4" src="modala.jpg"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Asante Aupa Modala</h3>
+                    <p class="text-gray-600 mb-2">Vice President (VP)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Team Member 3" class="w-full h-64 object-cover rounded-lg mb-4" src="morupisi.jpg"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Thabiso Morupisi-Khan</h3>
+                    <p class="text-gray-600 mb-2">Chief of Staff (CS), Board-Secretary</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Team Member 4" class="w-full h-64 object-cover rounded-lg mb-4" src="malikongwa.jpg"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Chanana Amina Malikongwa</h3>
+                    <p class="text-gray-600 mb-2">Chief Finance Officer</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Team Member 5" class="w-full h-64 object-cover rounded-lg mb-4" src="tsietso.jpg"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Wangu Brandon Tsietso</h3>
+                    <p class="text-gray-600 mb-2">Chief Operating Officer</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Team Member 6" class="w-full h-64 object-cover rounded-lg mb-4" src="sololo.jpg"/>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Gorutwa Lejwadilwe Sololo</h3>
+                    <p class="text-gray-600 mb-2">Chief Marketing Officer</p>
+                </div>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Our History</h2>
+            <p class="text-gray-600 mb-6">
+                Co-founded in November 2024, by Asante Aupa Modala and Leatile King Baaitse, Oratory League began as an initiative and a coalition of young orators striving to participate in oratory championships. However, ever since then, it has grown to become an oratory organization making strides in education and orate judiciary.
+            </p>
+            <img alt="Our History Image" class="w-full h-64 object-cover rounded-lg mb-4" src="history.jpg"/>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Download Our Portfolio</h2>
+            <p class="text-gray-600 mb-4">
+                Learn more about Oratory League by downloading our comprehensive portfolio. It includes detailed information about our mission, vision, team, history, and achievements.
+            </p>
+            <a class="bg-[#ae8300] text-white px-4 py-2 rounded-lg hover:bg-[#965f00]" download="" href="ORATORY LEAGUE PORTFOLIO.pdf" id="download-portfolio">
+                Download Portfolio
+            </a>
+        </section>
+    </main>
+    <footer class="bg-white shadow-md mt-8">
+        <div class="container mx-auto px-4 py-4 flex justify-between">
+            <p class="text-[#ae8300]">© 2025 Oratory League. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="notification" id="notification">
+        The download should have started.
     </div>
-   </div>
-   <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="index.html">
-     Home
-    </a>
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="about-us.html">
-     About Us
-    </a>
-    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">
-     Contact Us
-    </a>
-   </nav>
-  </div>
-  <header class="relative w-full h-screen">
-   <img alt="A banner image" class="absolute inset-0 w-full h-full object-cover" src="about-us-banner.jpg"/>
-  </header>
-  <main class="container mx-auto px-4 py-8">
-   <div class="flex justify-between items-center mb-4">
-    <h2 class="text-3xl font-bold text-gray-800">
-     About Us
-    </h2>
-    <a class="text-[#ae8300] hover:text-gray-800" href="index.html">
-     ← Back
-    </a>
-   </div>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">
-     Our Mission
-    </h2>
-    <p class="text-gray-600 mb-6">
-     At Oratory League, our mission is to empower orators worldwide through education, competition, and global networking. We strive to advance debate and oratory into legislative literature, fostering a community of skilled and confident speakers. We plan on elevating debate standards and empowering all members of the youth community. The Youth are the pivotal demographic of the economy, and as such, their talent must be nurtured. The power of speech can get you want. Oratory League aims at increasing the standards of orates and speaking skills for the members of the world economy. We embrace our principles of Unison, Elegance and Integrity!
-    </p>
-    <img alt="Our Mission Image" class="w-full h-64 object-cover rounded-lg mb-4" src="mission.jpg"/>
-   </section>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">
-     Our Vision
-    </h2>
-    <p class="text-gray-600 mb-6">
-     Our vision is to create an elegant, professional, and user-centric platform that facilitates debate education, competition management, global outreach, and career building in oratory and debate. We aim to reflect our journey of excellence, focus on innovation, and commitment to empowering debaters worldwide.
-     We envision a future where oratory shapes the economy in many constructs. Our organization plans 
-on drawing up a comprehensive system of debate that is more efficient than the current judiciary 
-system in solving and tackling legal cases. We give the world the liberation of choosing for their 
-cases to be handled by either professional attorneys or professional debaters. It would mitigate the 
-weight on the judicial processes, thus accelerating the rate at which the economy is served justice.
-In doing so, we are developing a new curriculum and course to install into universities and tertiary 
-institutions, allowing passionate debaters and orators around the world economy to enroll, study
-and become professional debaters. We see it moot for candidates to win debate championships
-and not be able to study such a course, whereas those who partake in moot court makes them fit to 
-be lawyers. Our well-narrated system allows debaters to handle cases on strict parameters, 
-proofing to yield more fairness and justice than the status quo of world standards.
-
-    </p>
-    <img alt="Our Vision Image" class="w-full h-64 object-cover rounded-lg mb-4" src="vision.jpg"/>
-   </section>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">
-     Our Team
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Team Member 1" class="w-full h-64 object-cover rounded-lg mb-4" src="baaitse.jpg"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       Leatile King Baaitse
-      </h3>
-      <p class="text-gray-600 mb-2">
-       President, Board-Chair, Acting CDO
-      </p>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Team Member 2" class="w-full h-64 object-cover rounded-lg mb-4" src="modala.jpg"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       Asante Aupa Modala
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Vice President (VP)
-      </p>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Team Member 3" class="w-full h-64 object-cover rounded-lg mb-4" src="morupisi.jpg"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       Thabiso Morupisi-Khan
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Chief of Staff (CS), Board-Secretary
-      </p>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Team Member 4" class="w-full h-64 object-cover rounded-lg mb-4" src="malikongwa.jpg"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       Chanana Amina Malikongwa
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Chief Finance Officer
-      </p>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Team Member 5" class="w-full h-64 object-cover rounded-lg mb-4" src="tsietso.jpg"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       Wangu Brandon Tsietso
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Chief Operating Officer
-      </p>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-md">
-      <img alt="Team Member 6" class="w-full h-64 object-cover rounded-lg mb-4" src="sololo.jpg"/>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">
-       Gorutwa Lejwadilwe Sololo
-      </h3>
-      <p class="text-gray-600 mb-2">
-       Chief Marketing Officer
-      </p>
-     </div>
-    </div>
-   </section>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">
-     Our History
-    </h2>
-    <p class="text-gray-600 mb-6">
-     Co-founded in November 2024, by Asante Aupa Modala and Leatile King Baaitse, Oratory League began as an initiative and a coalition of young orators striving to participate in oratory championships. However, ever since then, it has grown to become an oratory organization making strides in education and orate judiciary.
-    </p>
-    <img alt="Our History Image" class="w-full h-64 object-cover rounded-lg mb-4" src="history.jpg"/>
-   </section>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">
-     Download Our Portfolio
-    </h2>
-    <p class="text-gray-600 mb-4">
-     Learn more about Oratory League by downloading our comprehensive portfolio. It includes detailed information about our mission, vision, team, history, and achievements.
-    </p>
-    <a class="bg-[#ae8300] text-white px-4 py-2 rounded-lg hover:bg-[#965f00]" download="" href="ORATORY LEAGUE PORTFOLIO.pdf" id="download-portfolio">
-     Download Portfolio
-    </a>
-   </section>
-  </main>
-  <footer class="bg-white shadow-md mt-8">
-   <div class="container mx-auto px-4 py-4 flex justify-between">
-    <p class="text-[#ae8300]">
-     © 2025 Oratory League. All rights reserved.
-    </p>
-   </div>
-  </footer>
-  <div class="notification" id="notification">
-   The download should have started.
-  </div>
-  <script>
-   document.getElementById('menu-button').addEventListener('click', function() {
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
             var menu = document.getElementById('mobile-menu');
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
@@ -242,6 +183,6 @@ proofing to yield more fairness and justice than the status quo of world standar
                 }, 3000);
             }, 1500);
         });
-  </script>
- </body>
+    </script>
+</body>
 </html>

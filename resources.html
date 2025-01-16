@@ -47,6 +47,19 @@
                 padding: 0.45rem 0.9rem; /* Adjust padding to maintain button size */
             }
         }
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid #ae8300;
+            color: #ae8300;
+            background-color: rgba(244,237,218,255);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: none;
+            z-index: 1001;
+        }
    </style>
   </link>
  </head>
@@ -125,7 +138,7 @@
        A comprehensive guide to adjudication in debates. Learn the rules and techniques for effective adjudication.
       </p>
       <a download="" href="OLC ADJUDICATION MANUAL.pdf">
-       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive download-button">
         Download
        </button>
       </a>
@@ -139,7 +152,7 @@
        Detailed rubric for adjudicating debates. Understand the criteria and scoring system used in OLC debates.
       </p>
       <a download="" href="OLC ADJUDICATION RUBRIC.pdf">
-       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive download-button">
         Download
        </button>
       </a>
@@ -153,7 +166,7 @@
        Official ballot paper used in OLC debates. Download and print for use in your own debate events.
       </p>
       <a download="" href="OLC BALLOT PAPER.pdf">
-       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive download-button">
         Download
        </button>
       </a>
@@ -167,7 +180,7 @@
        Comprehensive manual for OLC debates. Learn the rules, formats, and strategies for successful debating.
       </p>
       <a download="" href="OLC DEBATE MANUAL.pdf">
-       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive download-button">
         Download
        </button>
       </a>
@@ -181,7 +194,7 @@
        Official banner for OLC Leg 1 event. Download and use for promoting the event.
       </p>
       <a download="" href="OLC LEG 1 BANNER.pdf">
-       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive download-button">
         Download
        </button>
       </a>
@@ -195,7 +208,7 @@
        Evaluation ballot for OLC speaking events. Use this to evaluate and score speakers effectively.
       </p>
       <a download="" href="OLC SPEAKING EVALUATION BALLOT.pdf">
-       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive download-button">
         Download
        </button>
       </a>
@@ -216,6 +229,9 @@
     </div>
    </div>
   </footer>
+  <div class="notification" id="notification">
+   Download Should Have Started!
+  </div>
   <script>
    document.getElementById('menu-button').addEventListener('click', function() {
             var menu = document.getElementById('mobile-menu');
@@ -224,6 +240,16 @@
             } else {
                 menu.classList.add('hidden');
             }
+        });
+
+        document.querySelectorAll('.download-button').forEach(button => {
+            button.addEventListener('click', function() {
+                var notification = document.getElementById('notification');
+                notification.style.display = 'block';
+                setTimeout(function() {
+                    notification.style.display = 'none';
+                }, 3000);
+            });
         });
   </script>
  </body>

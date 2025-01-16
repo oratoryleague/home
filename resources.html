@@ -1,0 +1,230 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Oratory League - Resources
+  </title>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+   <style>
+    .click-effect:active {
+            transform: scale(0.95);
+        }
+        .active-link {
+            position: relative;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px; 
+            width: 50%;
+            height: 2px;
+            background-color: #ae8300;
+        }
+        body {
+            font-family: 'Product Sans', sans-serif;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+        @media (max-width: 640px) {
+            .text-responsive-header {
+                font-size: 10px; /* 10px */
+            }
+            .text-responsive-description {
+                font-size: 6px; /* 6px */
+            }
+            .button-responsive {
+                font-size: 45%;
+                padding: 0.45rem 0.9rem; /* Adjust padding to maintain button size */
+            }
+        }
+   </style>
+  </link>
+ </head>
+ <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
+  <div class="sticky-nav bg-white shadow-md">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center">
+     <a href="index.html">
+      <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
+     </a>
+     <a href="index.html">
+      <span class="text-[#ae8300] text-xl font-bold ml-2">
+       ORATORY LEAGUE
+      </span>
+     </a>
+    </div>
+    <nav class="hidden md:flex space-x-4">
+     <a class="text-gray-600 hover:text-gray-800" href="index.html">
+      Home
+     </a>
+     <a class="text-gray-600 hover:text-gray-800 active-link" href="resources.html">
+      Resources
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="about-us.html">
+      About Us
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">
+      Contact Us
+     </a>
+    </nav>
+    <div class="md:hidden">
+     <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+   </div>
+   <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="index.html">
+     Home
+    </a>
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="resources.html">
+     Resources
+    </a>
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="about-us.html">
+     About Us
+    </a>
+    <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">
+     Contact Us
+    </a>
+   </nav>
+  </div>
+  <main class="container mx-auto px-4 py-8">
+   <section class="mb-8 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+     <span class="text-[#ae8300]">
+      OLC
+     </span>
+     Archive
+    </h2>
+    <p class="text-gray-600">
+     Explore our collection of documents and short books available for download. Enhance your knowledge and skills with these valuable resources.
+    </p>
+   </section>
+   <section class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+     Available Resources
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Cover of 'OLC Adjudication Manual'" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="OLC ADJUDICATION MANUAL.png" width="300"/>
+      <h5 class="text-xl font-bold text-gray-800 mb-2 text-responsive-header">
+       OLC Adjudication Manual
+      </h5>
+      <p class="text-gray-600 mb-2 text-responsive-description">
+       A comprehensive guide to adjudication in debates. Learn the rules and techniques for effective adjudication.
+      </p>
+      <a download="" href="OLC ADJUDICATION MANUAL.pdf">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+        Download
+       </button>
+      </a>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Cover of 'OLC Adjudication Rubric'" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="OLC ADJUDICATION RUBRIC.png" width="300"/>
+      <h5 class="text-xl font-bold text-gray-800 mb-2 text-responsive-header">
+       OLC Adjudication Rubric
+      </h5>
+      <p class="text-gray-600 mb-2 text-responsive-description">
+       Detailed rubric for adjudicating debates. Understand the criteria and scoring system used in OLC debates.
+      </p>
+      <a download="" href="OLC ADJUDICATION RUBRIC.pdf">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+        Download
+       </button>
+      </a>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Cover of 'OLC Ballot Paper'" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="OLC BALLOT PAPER.png" width="300"/>
+      <h5 class="text-xl font-bold text-gray-800 mb-2 text-responsive-header">
+       OLC Ballot Paper
+      </h5>
+      <p class="text-gray-600 mb-2 text-responsive-description">
+       Official ballot paper used in OLC debates. Download and print for use in your own debate events.
+      </p>
+      <a download="" href="OLC BALLOT PAPER.pdf">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+        Download
+       </button>
+      </a>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Cover of 'OLC Debate Manual'" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="OLC DEBATE MANUAL.png" width="300"/>
+      <h5 class="text-xl font-bold text-gray-800 mb-2 text-responsive-header">
+       OLC Debate Manual
+      </h5>
+      <p class="text-gray-600 mb-2 text-responsive-description">
+       Comprehensive manual for OLC debates. Learn the rules, formats, and strategies for successful debating.
+      </p>
+      <a download="" href="OLC DEBATE MANUAL.pdf">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+        Download
+       </button>
+      </a>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Cover of 'OLC Leg 1 Banner'" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="OLC LEG 1 BANNER.jpg" width="300"/>
+      <h5 class="text-xl font-bold text-gray-800 mb-2 text-responsive-header">
+       OLC Leg 1 Banner
+      </h5>
+      <p class="text-gray-600 mb-2 text-responsive-description">
+       Official banner for OLC Leg 1 event. Download and use for promoting the event.
+      </p>
+      <a download="" href="OLC LEG 1 BANNER.pdf">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+        Download
+       </button>
+      </a>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Cover of 'OLC Speaking Evaluation Ballot'" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="OLC SPEAKING EVALUATION BALLOT.png" width="300"/>
+      <h5 class="text-xl font-bold text-gray-800 mb-2 text-responsive-header">
+       OLC Speaking Evaluation Ballot
+      </h5>
+      <p class="text-gray-600 mb-2 text-responsive-description">
+       Evaluation ballot for OLC speaking events. Use this to evaluate and score speakers effectively.
+      </p>
+      <a download="" href="OLC SPEAKING EVALUATION BALLOT.pdf">
+       <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect button-responsive">
+        Download
+       </button>
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-white shadow-md mt-8">
+   <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+    <p class="text-[#ae8300] mb-4 md:mb-0">
+     © 2025 Oratory League. All rights reserved.
+    </p>
+    <div class="space-x-4">
+     <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+  </script>
+ </body>
+</html>

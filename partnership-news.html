@@ -16,15 +16,12 @@
             background-color: #f4edda;
         }
         header {
-            background-image: url('1739349667340.jpg');
-            background-size: cover;
-            background-position: center;
             width: 100%;
-            height: 50vh; /* Adjusted height to maintain proportions */
+            height: 50vh;
         }
         @media (max-width: 768px) {
             header {
-                height: 30vh; /* Adjusted height for smaller screens */
+                height: 30vh;
             }
         }
         .sticky-nav {
@@ -40,10 +37,19 @@
             content: '';
             position: absolute;
             left: 0;
-            bottom: -2px; /* Adjust this value to add space between the text and the underline */
-            width: 25%; /* This makes the underline a quarter the length of the text */
+            bottom: -2px;
+            width: 25%;
             height: 2px;
             background-color: #ae8300;
+        }
+        .text-gray-600 {
+            color: #4a5568;
+        }
+        .border-custom {
+            border-color: #ae8300;
+        }
+        .table-text {
+            font-size: 0.875rem; /* Reduced font size for table */
         }
     </style>
 </head>
@@ -73,30 +79,33 @@
             <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
         </nav>
     </div>
-    <header></header>
+    <header>
+        <img alt="HMCP Event Poster" class="w-full h-full object-cover" src="1739349667340.jpg"/>
+    </header>
     <main class="container mx-auto px-4 py-8">
         <div class="flex justify-between items-center mb-4">
-            <h2 class="text-3xl font-bold text-gray-800">Leave of the CS</h2>
+            <h2 class="text-3xl font-bold text-gray-800">Partnersip with HMCP</h2>
             <a href="index.html" class="text-[#ae8300] hover:text-gray-800">&larr; Back</a>
         </div>
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">About HMCP</h2>
-            <!-- Integrated HMCP News Article Start -->
-            <div class="news-article">
-              <h2>Navigating Transformations Together: A Journey to Creating a Balance Between Motherhood and Success</h2>
-          
-              <h3>Event Concept Note</h3>
-              <p><strong>Date:</strong> 1st March 2025</p>
-          
-              <h3>Introduction to Heavenly Mum Care Packages (HMCP)</h3>
-              <p>
-                Heavenly Mum Care Packages (HMCP) is a women-led healthcare company founded by a young mother who experienced firsthand the challenges of postpartum recovery. HMCP addresses these challenges by offering essential healing products tailored to different birthing procedures, packaged into convenient and affordable postpartum care kits. Since its inception in 2024, HMCP has made significant strides in empowering mothers by providing not only physical support but also emotional care through a platform that connects new mothers with clinical therapists and gynecologists. Their dedication to making motherhood smoother has earned them recognition in various entrepreneurship and innovation circles, including accolades such as the Forbes30Under30 Pitch Competition Semi-Finalists and Global Startup Awards Regional Finalists. We are proud to be part of the movement that is reshaping how postpartum care is perceived and provided, helping mothers reclaim their health and confidence during the crucial period following childbirth.
+            <p>
+                <strong>Heavenly Mum Care Packages (HMCP)</strong> is a <em>women-led</em> <strong>healthcare compan</strong>y founded by a young mother who experienced firsthand the challenges of postpartum recovery. HMCP addresses these challenges by offering essential <em>healing products</em> tailored to different birthing procedures, packaged into convenient and affordable postpartum care kits. Since its inception in 2024, HMCP has made significant strides in empowering mothers by providing not only physical support but also emotional care through a platform that connects new mothers with clinical therapists and gynecologists. <br><br>
+                    Their dedication to making motherhood smoother has earned them recognition in various entrepreneurship and innovation circles, including accolades such as the <strong>Forbes30Under30 Pitch Competition Semi-Finalists and Global Startup Awards Regional Finalists</strong>. We are proud to be part of the movement that is reshaping how postpartum care is perceived and provided, helping mothers reclaim their health and confidence during the crucial period following childbirth.
               </p>
+            <br>
+            <div class="news-article text-gray-600">
+              <h2>Navigating Transformations Together: A Journey to Creating a Balance Between Motherhood and Success</h2>
+              <br>
+              <h3>Event Concept Note</h3><br><br>
+              <p><strong>Date:</strong> 1st March 2025</p>
+        
           
               <h3>Event Overview: Navigating Transformations Together</h3>
               <p>
-                We are excited to host our first-ever signature event at the BNYC Hall venue, designed to bring together 75 young mothers from diverse backgrounds and professions for an empowering, heart-to-heart conversation on balancing motherhood with personal and professional success. The event will feature open discussions on the personal and professional journeys of mothers who have navigated the complexities of motherhood and career life. It will be a safe space for sharing experiences, challenges, and victories, while providing practical tools and advice for achieving a healthy work-life balance.
-              </p>
+               <strong>Oratory League</strong> is one of the proud partners of <strong>HMCP</strong> is proud to co-host their upcoming event dubbed <strong>Navigating Transformations Together</strong>. Our <em>Assistant Finance Director - <strong>Ms. Angel Letshola -</strong></em> will be representing the League to co-host the event.<br><br>
+                  We are excited to co-host our first-ever event at the <strong>BNYC Hall</strong> venue, designed to bring together <strong>75 young mothers</strong> from diverse backgrounds and professions for an empowering, heart-to-heart conversation on balancing motherhood with personal and professional success. The event will feature open discussions on the personal and professional journeys of mothers who have navigated the complexities of motherhood and career life. It will be a safe space for sharing experiences, challenges, and victories, while providing practical tools and advice for achieving a healthy work-life balance.
+              </p><br>
           
               <h3>Event Objectives and Expected Outcomes</h3>
               <ul>
@@ -112,7 +121,7 @@
                 <li>
                   <strong>Creating a Lasting Impact:</strong> Redefine the narrative of motherhood by debunking myths and breaking down barriers—empowering women to pursue their dreams without guilt.
                 </li>
-              </ul>
+              </ul><br><br>
           
               <h3>Target Audience</h3>
               <p>This event is designed for a diverse group of 75 mothers, including:</p>
@@ -123,135 +132,120 @@
                 <li>Corporate Leaders (C-suite, middle management, etc.)</li>
                 <li>Freelancers</li>
                 <li>Stay-at-home Moms</li>
-              </ul>
+              </ul><br><br>
           
               <h3>Impact of the Event</h3>
               <p>
-                This event will have a far-reaching impact on individual mothers, their families, workplaces, and communities. By equipping mothers with the tools, inspiration, and support needed to balance personal and professional lives, we aim to build stronger, more resilient communities. Empowered mothers can become transformative leaders, contributing to a broader societal shift toward more supportive, flexible, and inclusive work environments.
-              </p>
+                This event will have a far-reaching impact on individual mothers, their families, workplaces, and communities. By equipping mothers with the tools, inspiration, and support needed to balance personal and professional lives, we aim to build stronger, more resilient communities. <strong>Empowered mothers</strong> can become transformative leaders, contributing to a broader societal shift toward more supportive, flexible, and inclusive work environments.
+              </p><br><br>
               <ul>
                 <li><strong>Foster Stronger Connections:</strong> Build a network of mothers who support one another both professionally and personally.</li>
                 <li><strong>Inspire Confidence:</strong> Encourage mothers to embrace their dual roles as caregivers and professionals.</li>
                 <li><strong>Shape a New Narrative:</strong> Challenge and transform traditional views on motherhood and career success.</li>
-              </ul>
+              </ul><br><br>
           
               <h3>Event Agenda</h3>
-              <table border="1" cellspacing="0" cellpadding="5">
+              <table class="border-collapse border border-custom w-full text-gray-600 table-text">
                 <tr>
-                  <th>Time</th>
-                  <th>Topic/Activity</th>
-                  <th>Form of Discussion</th>
+                  <th class="border border-custom px-4 py-2">Time</th>
+                  <th class="border border-custom px-4 py-2">Topic/Activity</th>
+                  <th class="border border-custom px-4 py-2">Form of Discussion</th>
                 </tr>
                 <tr>
-                  <td>08:30 - 09:00</td>
-                  <td>Arrival and Registration</td>
-                  <td>-</td>
+                  <td class="border border-custom px-4 py-2">08:30 - 09:00</td>
+                  <td class="border border-custom px-4 py-2">Arrival and Registration</td>
+                  <td class="border border-custom px-4 py-2">-</td>
                 </tr>
                 <tr>
-                  <td>09:00 – 09:10</td>
-                  <td>Introduction of Guests (Follow Protocol)</td>
-                  <td>-</td>
+                  <td class="border border-custom px-4 py-2">09:00 – 09:10</td>
+                  <td class="border border-custom px-4 py-2">Introduction of Guests (Follow Protocol)</td>
+                  <td class="border border-custom px-4 py-2">-</td>
                 </tr>
                 <tr>
-                  <td>09:10 – 09:20</td>
-                  <td>Welcome and Opening Remarks</td>
-                  <td>Short Speech</td>
+                  <td class="border border-custom px-4 py-2">09:10 – 09:20</td>
+                  <td class="border border-custom px-4 py-2">Welcome and Opening Remarks</td>
+                  <td class="border border-custom px-4 py-2">Short Speech</td>
                 </tr>
                 <tr>
-                  <td>09:20 – 09:30</td>
-                  <td>Program Elucidation</td>
-                  <td>Presentation</td>
+                  <td class="border border-custom px-4 py-2">09:20 – 09:30</td>
+                  <td class="border border-custom px-4 py-2">Program Elucidation</td>
+                  <td class="border border-custom px-4 py-2">Presentation</td>
                 </tr>
                 <tr>
-                  <td>09:30 – 10:00</td>
-                  <td>
+                  <td class="border border-custom px-4 py-2">09:30 – 10:00</td>
+                  <td class="border border-custom px-4 py-2">
                     Topic 1: Motherhood and Leadership: Lessons from the Boardroom<br>
                     <em>Sharing experiences from women in leadership roles who balance family and career.</em>
                   </td>
-                  <td>Presentation</td>
+                  <td class="border border-custom px-4 py-2">Presentation</td>
                 </tr>
                 <tr>
-                  <td>10:00 - 10:20</td>
-                  <td>Stretching Exercise &amp; Tea</td>
-                  <td>-</td>
+                  <td class="border border-custom px-4 py-2">10:00 - 10:20</td>
+                  <td class="border border-custom px-4 py-2">Stretching Exercise &amp; Tea</td>
+                  <td class="border border-custom px-4 py-2">-</td>
                 </tr>
                 <tr>
-                  <td>10:20 – 10:50</td>
-                  <td>
+                  <td class="border border-custom px-4 py-2">10:20 – 10:50</td>
+                  <td class="border border-custom px-4 py-2">
                     Panel Discussion 1: Motherhood, Career, and Identity: Redefining Success<br>
                     <em>Panellists discuss how they define success beyond traditional career and family goals.</em>
                   </td>
-                  <td>Panel Discussion</td>
+                  <td class="border border-custom px-4 py-2">Panel Discussion</td>
                 </tr>
                 <tr>
-                  <td>10:50 - 11:00</td>
-                  <td>Performances</td>
-                  <td>-</td>
+                  <td class="border border-custom px-4 py-2">10:50 - 11:00</td>
+                  <td class="border border-custom px-4 py-2">Performances</td>
+                  <td class="border border-custom px-4 py-2">-</td>
                 </tr>
                 <tr>
-                  <td>11:00 - 11:30</td>
-                  <td>
+                  <td class="border border-custom px-4 py-2">11:00 - 11:30</td>
+                  <td class="border border-custom px-4 py-2">
                     Panel Discussion 2: Transformative Leadership Through Motherhood<br>
                     <em>Exploring how motherhood cultivates skills such as empathy, multitasking, and problem-solving for effective leadership.</em>
                   </td>
-                  <td>Panel Discussion</td>
+                  <td class="border border-custom px-4 py-2">Panel Discussion</td>
                 </tr>
                 <tr>
-                  <td>11:30 – 12:00</td>
-                  <td>
+                  <td class="border border-custom px-4 py-2">11:30 – 12:00</td>
+                  <td class="border border-custom px-4 py-2">
                     Topic 2: Breaking the Myths: Modern Motherhood<br>
                     <em>Challenging societal expectations and stereotypes surrounding working mothers.</em>
                   </td>
-                  <td>Presentation</td>
+                  <td class="border border-custom px-4 py-2">Presentation</td>
                 </tr>
                 <tr>
-                  <td>12:00 - 13:00</td>
-                  <td>Lunch Break</td>
-                  <td>-</td>
+                  <td class="border border-custom px-4 py-2">12:00 - 13:00</td>
+                  <td class="border border-custom px-4 py-2">Lunch Break</td>
+                  <td class="border border-custom px-4 py-2">-</td>
                 </tr>
                 <tr>
-                  <td>13:00 – 13:30</td>
-                  <td>
+                  <td class="border border-custom px-4 py-2">13:00 – 13:30</td>
+                  <td class="border border-custom px-4 py-2">
                     Panel Discussion 3: Financial Literacy for Mothers: Building a Secure Future<br>
                     <em>Teaching mothers how to manage finances, invest, and prepare for their family's future.</em>
                   </td>
-                  <td>Panel Discussion</td>
+                  <td class="border border-custom px-4 py-2">Panel Discussion</td>
                 </tr>
                 <tr>
-                  <td>13:30 - 13:40</td>
-                  <td>Performances</td>
-                  <td>-</td>
+                  <td class="border border-custom px-4 py-2">13:30 - 13:40</td>
+                  <td class="border border-custom px-4 py-2">Performances</td>
+                  <td class="border border-custom px-4 py-2">-</td>
                 </tr>
                 <tr>
-                  <td>13:40 - 13:50</td>
-                  <td>Conclusions &amp; Closing Remarks</td>
-                  <td>-</td>
+                  <td class="border border-custom px-4 py-2">13:40 - 13:50</td>
+                  <td class="border border-custom px-4 py-2">Conclusions &amp; Closing Remarks</td>
+                  <td class="border border-custom px-4 py-2">-</td>
                 </tr>
                 <tr>
-                  <td>13:50 - 14:00</td>
-                  <td>Photo Opportunity &amp; Networking</td>
-                  <td>-</td>
+                  <td class="border border-custom px-4 py-2">13:50 - 14:00</td>
+                  <td class="border border-custom px-4 py-2">Photo Opportunity &amp; Networking</td>
+                  <td class="border border-custom px-4 py-2">-</td>
                 </tr>
-              </table>  
-          
-              <h3>Request for Partnership</h3>
-              <p>
-                We are kindly requesting sponsorships and partnerships to make this program a huge success. Given your commitment to supporting community-based initiatives and fostering youth development in innovation and entrepreneurship, your contribution would be invaluable. We are confident that this event will align with your values of creating positive social change and providing a platform for innovation. We look forward to discussing partnership and sponsorship details further and working together to make this event a resounding success.
-              </p>
-          
-              <h3>Conclusion</h3>
-              <p>
-                Thank you for considering our partnership request to host “Navigating Transformations Together: A Journey to Creating a Balance between Motherhood and Success” on 1st March 2025. We are excited about the potential to create lasting change and support mothers across Botswana in balancing their career aspirations with their roles as mothers. Together, we can forge a powerful movement that redefines the future of motherhood and women’s empowerment. Please contact us if you require additional information or would like to arrange a meeting to discuss this proposal in detail.
-              </p>
+              </table>
+                <br><br>
           
               <p>
-                Sincerely,<br>
-                <strong>Ms. Peo Rose Toistere</strong><br>
-                Founder &amp; Managing Director<br>
-                Heavenly Mum Care Packages (HMCP)<br>
-                Contact: +267 78 192 138<br>
-                Email: <a href="mailto:rose@hmcp.tech">rose@hmcp.tech</a> | <a href="mailto:peorosetoistere@gmail.com">peorosetoistere@gmail.com</a>
-              </p>
+                For more information, you can reach our <em>Public Relations Officer & President of the <strong>League</strong></em> - <strong>Mr. Leatile King Baaitise</strong> via WhatsApp on <strong>+267 71 419 498</strong>, or <em><strong>HMCP</strong> founder & Managing Director</em> - <strong>Ms. Peo Rose Toistere</strong>, on <strong>+267 78 192 138</strong>, or email her on <a href="mailto:rose@hmcp.tech">rose@hmcp.tech</a> | <a href="mailto:peorosetoistere@gmail.com">peorosetoistere@gmail.com</a>.<br>
             </div>
             <!-- Integrated HMCP News Article End -->
         </section>

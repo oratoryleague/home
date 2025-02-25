@@ -75,27 +75,18 @@
                 <label class="block text-gray-700 font-bold mb-2" for="registration-fees">Registration Fees</label>
                 <p class="text-gray-700 mb-2">The registration fee for this event is $36.33.</p>
             </div>
-            <div id="paypal-button-container" class="mb-4"></div>
+            <div id="paypal-container-JTBUDE8REFVFJ" class="mb-4"></div>
             <script src="https://www.paypal.com/sdk/js?client-id=BAA4mKdlgSrb_pyimVgB-HoCLEPW2SfPeXX7oSIrA9IN3bV4fzI5NXKxyPJSLfTJdGQh5x5LG3osR0Xl5g&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
             <script>
-                paypal.Buttons({
-                    createOrder: function(data, actions) {
-                        //Details of Transaction
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: {
-                                    value: '36.33'
-                                }
-                            }]
-                        });
-                    },
+                paypal.HostedButtons({
+                    hostedButtonId: "JTBUDE8REFVFJ",
                     onApprove: function(data, actions) {
                         return actions.order.capture().then(function(details) {
                             alert('Transaction completed by ' + details.payer.name.given_name);
                             document.getElementById("registrationForm").submit();
                         });
                     }
-                }).render('#paypal-button-container');
+                }).render("#paypal-container-JTBUDE8REFVFJ");
             </script>
             <button type="submit" class="w-full bg-[#ae8300] text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800">Submit</button>
         </form>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +7,12 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=AXOreNj4c6Yzp-IA79UBmp3xAHVwX00w0QF45m7zJydVjTvoWHXmtESxGkz5czElQH4LLEtvobiZZnT5&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
     <style>
-        html {
-            min-height: 100%;
-            position: relative;
-        }
+        html { min-height: 100%; position: relative; }
         body {
             margin: 0;
-            padding-bottom: 80px; /* Height of the footer */
+            padding-bottom: 80px;
             box-sizing: border-box;
             min-height: 100%;
             display: flex;
@@ -21,29 +20,25 @@
             background-color: #f4edda;
             font-family: 'Product Sans', sans-serif;
         }
-        main {
-            flex: 1;
-        }
-        footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
+        main { flex: 1; }
+        footer { position: absolute; bottom: 0; width: 100%; }
     </style>
 </head>
 <body class="font-roboto">
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html"><img src="logo.png" alt="Oratory League Logo" class="h-10"></a>
-            <a href="#"><h1 class="text-[#ae8300] text-xl font-bold">Register for OLC Leg 1</h1></a>
+            <h1 class="text-[#ae8300] text-xl font-bold">Register for OLC Leg 1</h1>
         </div>
     </header>
+    
     <main class="container mx-auto px-4 py-8">
         <div class="flex justify-between items-center mb-4">
             <h2 class="text-3xl font-bold text-gray-800">Event Registration</h2>
             <a href="index.html" class="text-[#ae8300] hover:text-gray-800">&larr; Back</a>
         </div>
-        <form class="bg-white p-8 rounded-lg shadow-md" action="mailto:events@oratoryleague.com" method="post" enctype="text/plain">
+        
+        <form id="registrationForm" class="bg-white p-8 rounded-lg shadow-md">
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="school">School Name</label>
                 <input class="w-full px-4 py-2 border rounded-lg" type="text" id="school" name="School Name" placeholder="Enter school name" required>
@@ -57,7 +52,7 @@
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2" for="Region">Region</label>
-                <select class="w-full px-4 py-2 border rounded-lg" id="education-level" name="Region Name" required>
+                <select class="w-full px-4 py-2 border rounded-lg" id="region" name="Region Name" required>
                     <option value="North East">North East</option>
                     <option value="North West">North West</option>
                     <option value="Central">Central</option>
@@ -77,21 +72,48 @@
                 <label class="block text-gray-700 font-bold mb-2" for="participants">Number of Participants</label>
                 <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" name="Number of Participants" placeholder="Enter number of participants" required>
             </div>
-            
-            <button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect" type="submit">Register</button><br>
-            <style>.pp-NQ3PGRQBGN6Y2{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
-<form action="https://www.paypal.com/ncp/payment/NQ3PGRQBGN6Y2" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-  <input class="pp-NQ3PGRQBGN6Y2" type="submit" value="Pay Now" />
-  <img src=https://www.paypalobjects.com/images/Debit_Credit.svg alt="cards" />
-  <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-</form>
+
+            <div id="paypal-container-NQ3PGRQBGN6Y2"></div>
         </form>
-         <a href="theme-news.html" class="text-[#ae8300] hover:text-gray-800">&larr; Learn More About Leg 1</a>
+
+        <a href="theme-news.html" class="text-[#ae8300] hover:text-gray-800">&larr; Learn More About Leg 1</a>
     </main>
+    
     <footer class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between">
             <p class="text-[#ae8300]">© 2025 Oratory League. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        let formData = {};
+
+        document.getElementById("registrationForm").addEventListener("change", function() {
+            const formElements = this.elements;
+            formData = {};
+            for (let element of formElements) {
+                if (element.name) {
+                    formData[element.name] = element.value;
+                }
+            }
+        });
+
+        paypal.HostedButtons({
+            hostedButtonId: "NQ3PGRQBGN6Y2",
+            onApprove: function(data, actions) {
+                sendEmail(formData);
+            }
+        }).render("#paypal-container-NQ3PGRQBGN6Y2");
+
+        function sendEmail(data) {
+            let emailBody = "";
+            for (const key in data) {
+                emailBody += `${key}: ${data[key]}\n`;
+            }
+
+            let mailtoLink = `mailto:events@oratoryleague.com?subject=Registration%20Details&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
 </body>
 </html>

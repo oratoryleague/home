@@ -71,23 +71,14 @@
                 <label class="block text-gray-700 font-bold mb-2" for="participants">Number of Participants</label>
                 <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" name="Number of Participants" placeholder="Enter number of participants" required>
             </div>
-            <div id="paypal-button-container"></div>
+            <br>
             <script src="https://www.paypal.com/sdk/js?client-id=BAA4mKdlgSrb_pyimVgB-HoCLEPW2SfPeXX7oSIrA9IN3bV4fzI5NXKxyPJSLfTJdGQh5x5LG3osR0Xl5g&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-
-            <script>
-                paypal.Buttons({
-                    createOrder: function(data, action){
-                        //Details of Transaction
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: {
-                                    value: '36.33'
-                                }
-                            }]
-                        });
-                    }
-                }).render('#paypal-button-container')
-            </script>
+<div id="paypal-container-JTBUDE8REFVFJ"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "JTBUDE8REFVFJ",
+  }).render("#paypal-container-JTBUDE8REFVFJ")
+</script>
 
         </form>
 
@@ -100,35 +91,5 @@
         </div>
     </footer>
 
-    <script>
-        let formData = {};
-
-        document.getElementById("registrationForm").addEventListener("change", function() {
-            const formElements = this.elements;
-            formData = {};
-            for (let element of formElements) {
-                if (element.name) {
-                    formData[element.name] = element.value;
-                }
-            }
-        });
-
-        paypal.HostedButtons({
-            hostedButtonId: "NQ3PGRQBGN6Y2",
-            onApprove: function(data, actions) {
-                sendEmail(formData);
-            }
-        }).render("#paypal-container-NQ3PGRQBGN6Y2");
-
-        function sendEmail(data) {
-            let emailBody = "";
-            for (const key in data) {
-                emailBody += `${key}: ${data[key]}\n`;
-            }
-
-            let mailtoLink = `mailto:events@oratoryleague.com?subject=Registration%20Details&body=${encodeURIComponent(emailBody)}`;
-            window.location.href = mailtoLink;
-        }
-    </script>
 </body>
 </html>

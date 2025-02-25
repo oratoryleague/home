@@ -7,8 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://www.paypal.com/sdk/js?client-id=AXOreNj4c6Yzp-IA79UBmp3xAHVwX00w0QF45m7zJydVjTvoWHXmtESxGkz5czElQH4LLEtvobiZZnT5&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-    <style>
+    
         html { min-height: 100%; position: relative; }
         body {
             margin: 0;
@@ -72,8 +71,24 @@
                 <label class="block text-gray-700 font-bold mb-2" for="participants">Number of Participants</label>
                 <input class="w-full px-4 py-2 border rounded-lg" type="number" id="participants" name="Number of Participants" placeholder="Enter number of participants" required>
             </div>
+            <div id="paypal-button-container"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=BAA4mKdlgSrb_pyimVgB-HoCLEPW2SfPeXX7oSIrA9IN3bV4fzI5NXKxyPJSLfTJdGQh5x5LG3osR0Xl5g&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
-            <div id="paypal-container-NQ3PGRQBGN6Y2"></div>
+            <script>
+                paypal.Buttons({
+                    createOrder: function(data, action){
+                        //Details of Transaction
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '36.33'
+                                }
+                            }]
+                        });
+                    }
+                }).render('#paypal-button-container')
+            </script>
+
         </form>
 
         <a href="theme-news.html" class="text-[#ae8300] hover:text-gray-800">&larr; Learn More About Leg 1</a>

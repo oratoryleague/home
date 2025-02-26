@@ -32,6 +32,19 @@
             z-index: 1000;
             background-color: white;
         }
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee img {
+            margin-right: 2rem;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
     </style>
 </head>
 <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
@@ -119,7 +132,7 @@
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Latest News</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="bg-white p-4 rounded-lg shadow-md">
-                    <img alt="" class="w-full h-40 object-cover rounded-lg mb-4" src="GABORONE FLOOD SUPPORT.jpg"/>
+                    <img alt="Gaborone Flood Support" class="w-full h-40 object-cover rounded-lg mb-4" src="GABORONE FLOOD SUPPORT.jpg"/>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Our Response To The Floods</h3>
                     <p class="text-gray-600 mb-2">Read about how Oratory League is responding to the recent floods and helping affected communities.</p>
                     <a href="floods-news.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Read More</button></a>
@@ -131,13 +144,32 @@
                     <a href="theme-news.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Read More</button></a>
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow-md">
-                    <img alt="" class="w-full h-40 object-cover rounded-lg mb-4" src="HMCP.jpg"/>
+                    <img alt="HMCP Partnership" class="w-full h-40 object-cover rounded-lg mb-4" src="HMCP.jpg"/>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">The League Partners with HMCP</h3>
                     <p class="text-gray-600 mb-2">Learn about the new partnership between the Oratory League and HMCP.</p>
                     <a href="partnership-news.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Read More</button></a>
                 </div>
-                
             </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Partners</h2>
+            <div class="overflow-hidden">
+                <div class="marquee">
+                    <img alt="Logo of Partner 1" height="100" src="spelling bee.png" width="150"/>
+                    <img alt="Logo of Partner 2" height="100" src="bbhf.png" width="150"/>
+                    <img alt="Logo of Partner 3" height="100" src="mogobe.png" width="150"/>
+                    <img alt="Logo of Partner 4" height="100" src="new horizons.png" width="150"/>
+                    <img alt="Logo of Partner 5" height="100" src="hmcp.png" width="150"/>
+                    <img alt="Logo of Partner 6" height="100" src="greyed.png" width="150"/>
+                    <img alt="Logo of Partner 7" height="100" src="tok.png" width="150"/>
+                    <img alt="Logo of Partner 8" height="100" src="gazette.png" width="150"/>
+                    <img alt="Logo of Partner 9" height="100" src="love botswana.png" width="150"/>
+                    <img alt="Logo of Partner 10" height="100" src="wsa-b.png" width="150"/>
+                </div>
+            </div>
+        </section>
+        <section class="mb-8">
+            <a href="donate.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Donate to the League</button></a>
         </section>
     </main>
     <footer class="bg-white shadow-md mt-8">

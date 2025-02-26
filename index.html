@@ -63,6 +63,49 @@
             from { transform: translateX(0); }
             to { transform: translateX(-50%); }
         }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            color: #ae8300;
+            flex-wrap: wrap;
+        }
+        .countdown div {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 70px;
+        }
+        .countdown span {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .countdown-container {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 640px) {
+            .countdown {
+                font-size: 0.75rem;
+            }
+            .countdown div {
+                padding: 0.5rem;
+                min-width: 35px;
+            }
+            .countdown span {
+                font-size: 0.625rem;
+            }
+            .countdown-container {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
@@ -98,18 +141,41 @@
             <p class="text-gray-600">Empowering debaters worldwide through education, competition, and global networking. We are striving towards advancing debate and oratory into legislative literature.</p>
         </section>
         <section class="mb-8">
-            <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 p-6 rounded-lg shadow-lg text-white">
+            <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 p-6 rounded-lg shadow-lg text-white bg-opacity-80">
                 <div class="flex flex-col md:flex-row items-center">
                     <img alt="Featured" class="w-full md:w-1/2 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-4" src="featured.png"/>
                     <div>
                         <h3 class="text-3xl font-bold mb-2">Our Inaugural OLC</h3>
-                        <p class="text-lg mb-4">Be a part of the transformative <strong>Oratory League Championships (OLC) Leg 1</strong> as we strive to reignite the spirit, talent and passion for oratory in the <strong><em>northeast, northwest & central</em></strong> regions. Categories of the championship will be <strong>debate, public speaking, poetry & spelling bee.</strong> Make sure to register now with and engage with our incredible theme of <strong>Power, Progress & Ethics of Control</strong> at <strong>Masunga SSS</strong> from <strong>16th - 23rd April 2025.</strong></p>
-                        <a href="theme-news.html"><button class="bg-white text-[#ae8300] px-4 py-2 rounded-lg click-effect">Theme Details</button></a> <a href="https://form.jotform.com/250557314348054"><button class="bg-white text-[#ae8300] px-4 py-2 rounded-lg click-effect">Delegation Registration</button></a>
+                        <p class="text-base md:text-lg mb-4">Be a part of the transformative <strong>Oratory League Championships (OLC) Leg 1</strong> as we strive to reignite the spirit, talent and passion for oratory in the <strong><em>northeast, northwest & central</em></strong> regions. Categories of the championship will be <strong>debate, public speaking, poetry & spelling bee.</strong> Make sure to register now with and engage with our incredible theme of <strong>Power, Progress & Ethics of Control</strong> at <strong>Masunga SSS</strong> from <strong>16th - 23rd April 2025.</strong></p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="theme-news.html"><button class="bg-white text-[#ae8300] px-4 py-2 rounded-lg click-effect">Theme Details</button></a>
+                            <a href="https://form.jotform.com/250557314348054"><button class="bg-white text-[#ae8300] px-4 py-2 rounded-lg click-effect">Delegation Registration</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+        <section class="mb-8 countdown-container">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Countdown to Leg 1</h2>
+            <div class="countdown" id="countdown">
+                <div>
+                    <span id="days">0</span>
+                    Days
+                </div>
+                <div>
+                    <span id="hours">0</span>
+                    Hours
+                </div>
+                <div>
+                    <span id="minutes">0</span>
+                    Minutes
+                </div>
+                <div>
+                    <span id="seconds">0</span>
+                    Seconds
+                </div>
+            </div>
+        </section>
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Upcoming Events</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -227,6 +293,9 @@
                 menu.classList.add('hidden');
             }
         });
-    </script>
-</body>
-</html>
+
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('April 16, 2025 12:00:00').getTime();
+            const now = new Date().getTime();
+           

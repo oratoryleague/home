@@ -32,20 +32,25 @@
             z-index: 1000;
             background-color: white;
         }
-        .marquee {
-            display: flex;
+        .marquee-container {
             overflow: hidden;
             white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+        .marquee {
+            display: flex;
+            width: max-content;
             animation: marquee 20s linear infinite;
         }
         .marquee img {
-            margin-right: 2rem;
-            height: 80px; /* Adjusted height for all logos */
+            margin-right: 1.5rem;
+            height: 60px;
             width: auto;
         }
         @keyframes marquee {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
         }
     </style>
 </head>

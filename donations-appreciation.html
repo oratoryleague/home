@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Thank You for Your Donation - Oratory League</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        .click-effect:active {
+            transform: scale(0.95);
+        }
+        .active-link {
+            position: relative;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px; 
+            width: 50%;
+            height: 2px;
+            background-color: #ae8300;
+        }
+        body {
+            font-family: 'Product Sans', sans-serif;
+            background-color: rgba(244,237,218,255);
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee img {
+            margin-right: 2rem;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .celebration {
+            background: linear-gradient(135deg, #f4edda 25%, #ffeb3b 50%, #f4edda 75%);
+            animation: backgroundMove 10s linear infinite;
+        }
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .banner-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+        }
+    </style>
+</head>
+<body class="font-roboto celebration">
+    <div class="sticky-nav bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html"><img alt="Oratory League Logo" class="h-10" src="logo.png"/></a>
+                <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
+                <a class="text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+                <a class="text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+                <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+        </nav>
+    </div>
+    <main class="container mx-auto px-4 py-8 text-center">
+        <section class="mb-8">
+            <img alt="Celebration Banner" class="banner-image rounded-lg mb-4" src="celebration.svg"/>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Thank You for Your Generous Donation!</h2>
+            <p class="text-gray-600 text-lg">Your support helps us empower debaters worldwide through education, competition, and global networking. Because of you, we now in a better position to engage policies that shape our futures, and govern <strong>your life</strong>. Together, we are advancing debate and oratory into legislative literature.</p>
+        </section>
+        
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Partners</h2>
+            <div class="overflow-hidden">
+                <div class="marquee">
+                    <img alt="Logo of Partner 1" height="100" src="spelling bee.png" width="150"/>
+                    <img alt="Logo of Partner 2" height="100" src="bbhf.png" width="150"/>
+                    <img alt="Logo of Partner 3" height="100" src="mogobe.png" width="150"/>
+                    <img alt="Logo of Partner 4" height="100" src="new horizons.png" width="150"/>
+                    <img alt="Logo of Partner 5" height="100" src="hmcp.png" width="150"/>
+                    <img alt="Logo of Partner 6" height="100" src="greyed.png" width="150"/>
+                    <img alt="Logo of Partner 7" height="100" src="tok.png" width="150"/>
+                    <img alt="Logo of Partner 8" height="100" src="gazette.png" width="150"/>
+                    <img alt="Logo of Partner 9" height="100" src="love botswana.png" width="150"/>
+                    <img alt="Logo of Partner 10" height="100" src="wsa-b.png" width="150"/>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white shadow-md mt-8">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory League. All rights reserved.</p>
+            <div class="space-x-4">
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

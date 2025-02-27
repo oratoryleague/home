@@ -99,6 +99,142 @@
             height: 2px;
             background-color: #ae8300;
         }
+        .click-effect:active {
+            transform: scale(0.95);
+        }
+        .active-link {
+            position: relative;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px; 
+            width: 50%;
+            height: 2px;
+            background-color: #ae8300;
+        }
+        body {
+            font-family: 'Product Sans', sans-serif;
+            background-color: rgba(244,237,218,255);
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+        .marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee img {
+            margin-right: 1.5rem;
+            height: 60px;
+            width: auto;
+        }
+        .marquee img.mogobe {
+            height: 50px;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .celebration {
+            background: linear-gradient(135deg, #f4edda 25%, #ffeb3b 50%, #f4edda 75%);
+            animation: backgroundMove 10s linear infinite;
+        }
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .banner-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+        }
+        .package-bg-bronze {
+            background: linear-gradient(135deg, rgba(205, 127, 50, 0.5), rgba(205, 127, 50, 0.5));
+        }
+        .package-bg-silver {
+            background: linear-gradient(135deg, rgba(192, 192, 192, 0.5), rgba(192, 192, 192, 0.5));
+        }
+        .package-bg-gold {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0.5));
+        }
+        .package-bg-platinum {
+            background: linear-gradient(135deg, rgba(229, 228, 226, 0.5), rgba(229, 228, 226, 0.5));
+        }
+        .package-bg-diamond {
+            background: linear-gradient(135deg, rgba(185, 242, 255, 0.5), rgba(185, 242, 255, 0.5));
+        }
+        .package-bg-legendary {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.5), rgba(255, 140, 0, 0.5));
+        }
+        .btn-bronze {
+            background-color: #cd7f32;
+            border: 1px solid #cd7f32;
+        }
+        .btn-silver {
+            background-color: #c0c0c0;
+            border: 1px solid #c0c0c0;
+        }
+        .btn-gold {
+            background-color: #ffd700;
+            border: 1px solid #ffd700;
+        }
+        .btn-platinum {
+            background-color: #e5e4e2;
+            border: 1px solid #e5e4e2;
+        }
+        .btn-diamond {
+            background-color: #b9f2ff;
+            border: 1px solid #b9f2ff;
+        }
+        .btn-legendary {
+            background-color: #ff4500;
+            border: 1px solid #ff4500;
+        }
+        .btn-bronze {
+            border: 1px solid #fff;
+        }
+        .btn-legendary {
+            border: 1px solid #fff;
+        }
+        .btn-silver, .btn-gold, .btn-platinum, .btn-diamond {
+            border: 1px solid #808080;
+        }
+        @media (max-width: 640px) {
+            .sponsor-header {
+                font-size: 1.5rem !important;
+            }
+            .sponsor-text {
+                font-size: 0.75rem !important;
+            }
+            .sponsor-card h3 {
+                font-size: 1rem !important;
+            }
+            .sponsor-card p {
+                font-size: 0.625rem !important;
+            }
+            .sponsor-card button {
+                font-size: 0.625rem !important;
+                padding: 0.25rem 0.5rem !important;
+            }
+            .sponsor-card {
+                padding: 0.5rem !important;
+            }
+            .grid-gap {
+                gap: 0.5rem !important;
+            }
+        }
     </style>
 </head>
 <body>

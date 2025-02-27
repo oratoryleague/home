@@ -1,0 +1,288 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sponsorships - Oratory League</title>
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NW2CY6M8Q5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NW2CY6M8Q5');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .click-effect:active {
+            transform: scale(0.95);
+        }
+        .active-link {
+            position: relative;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px; 
+            width: 50%;
+            height: 2px;
+            background-color: #ae8300;
+        }
+        body {
+            font-family: 'Product Sans', sans-serif;
+            background-color: rgba(244,237,218,255);
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+        .marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee img {
+            margin-right: 1.5rem;
+            height: 60px;
+            width: auto;
+        }
+        .marquee img.mogobe {
+            height: 50px;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .celebration {
+            background: linear-gradient(135deg, #f4edda 25%, #ffeb3b 50%, #f4edda 75%);
+            animation: backgroundMove 10s linear infinite;
+        }
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .banner-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+        }
+        .package-bg-bronze {
+            background: linear-gradient(135deg, rgba(205, 127, 50, 0.5), rgba(205, 127, 50, 0.5));
+        }
+        .package-bg-silver {
+            background: linear-gradient(135deg, rgba(192, 192, 192, 0.5), rgba(192, 192, 192, 0.5));
+        }
+        .package-bg-gold {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0.5));
+        }
+        .package-bg-platinum {
+            background: linear-gradient(135deg, rgba(229, 228, 226, 0.5), rgba(229, 228, 226, 0.5));
+        }
+        .package-bg-diamond {
+            background: linear-gradient(135deg, rgba(185, 242, 255, 0.5), rgba(185, 242, 255, 0.5));
+        }
+        .package-bg-legendary {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.5), rgba(255, 140, 0, 0.5));
+        }
+        .btn-bronze {
+            background-color: #cd7f32;
+            border: 1px solid #cd7f32;
+        }
+        .btn-silver {
+            background-color: #c0c0c0;
+            border: 1px solid #c0c0c0;
+        }
+        .btn-gold {
+            background-color: #ffd700;
+            border: 1px solid #ffd700;
+        }
+        .btn-platinum {
+            background-color: #e5e4e2;
+            border: 1px solid #e5e4e2;
+        }
+        .btn-diamond {
+            background-color: #b9f2ff;
+            border: 1px solid #b9f2ff;
+        }
+        .btn-legendary {
+            background-color: #ff4500;
+            border: 1px solid #ff4500;
+        }
+        .btn-bronze {
+            border: 1px solid #fff;
+        }
+        .btn-legendary {
+            border: 1px solid #fff;
+        }
+        .btn-silver, .btn-gold, .btn-platinum, .btn-diamond {
+            border: 1px solid #808080;
+        }
+        @media (max-width: 640px) {
+            .sponsor-header {
+                font-size: 1.5rem !important;
+            }
+            .sponsor-text {
+                font-size: 0.75rem !important;
+            }
+            .sponsor-card h3 {
+                font-size: 1rem !important;
+            }
+            .sponsor-card p {
+                font-size: 0.625rem !important;
+            }
+            .sponsor-card button {
+                font-size: 0.625rem !important;
+                padding: 0.25rem 0.5rem !important;
+            }
+            .sponsor-card {
+                padding: 0.5rem !important;
+            }
+            .grid-gap {
+                gap: 0.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-roboto celebration">
+    <div class="sticky-nav bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img alt="Oratory League Logo" class="h-10" src="logo.png"/>
+                </a>
+                <a href="index.html">
+                    <span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span>
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="text-gray-600 hover:text-gray-800" href="index.html">Home</a>
+                <a class="text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+                <a class="text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+                <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+                <a class="text-gray-600 hover:text-gray-800 active-link" href="sponsor.html">Sponsorships</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="index.html">Home</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="sponsor.html">Sponsorships</a>
+        </nav>
+    </div>
+    <main class="text-center">
+        <section class="mb-8">
+            <div class="w-full bg-yellow-300 py-16 flex flex-col items-center justify-center">
+                <h1 class="text-[120px] font-bold text-gray-800 leading-none md:text-[120px] text-[70px]">SPONSOR THE LEAGUE</h1>
+                <p class="text-gray-800 text-lg mt-4 max-w-4xl font-bold md:text-lg text-sm">
+                    Your support helps us empower debaters worldwide through education, competition, and global networking. Because of you, we now in a better position to engage policies that shape our futures, and govern
+                    <strong>your life</strong>. Together, we are advancing debate and oratory into legislative literature.
+                </p>
+            </div>
+            <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center">
+                <img alt="Image of young orators participating in a debate competition" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0 md:mr-8" height="400" src="sponsor.jpg" width="300"/>
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Your Sponsorship Transforms Lives!</h2>
+                    <p class="text-gray-800 text-lg mt-4 max-w-4xl font-bold md:text-lg text-sm mx-auto">
+                        Your sponsorship fuels Oratory League—a youth-driven force established in November 2024 dedicated to championing intellectual oratory, critical thinking, and leadership. With your support, our rising orators gain the platform to tackle Botswana’s most pressing challenges. From addressing the education crisis affecting over 11,570 students to combating the impacts of climate change and harnessing AI for personalized learning through partners like GreyEd, your contribution drives transformative change. Moreover, your sponsorship enables our vital work in HIV and health advocacy, ensuring that our youth become active contributors to policy discussions and social transformation. Together, we are not just advancing debate; we are shaping the future of Botswana and Africa.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Sponsorship Packages Section -->
+        <section class="mb-8 container mx-auto px-4">
+            <hr class="mb-4 border-gray-800">
+            <h2 class="sponsor-header text-3xl md:text-3xl font-bold text-gray-800 mb-4">Sponsorship Packages</h2>
+            <!-- Using a grid: 2 columns on small screens; 3 on medium+ -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 grid-gap">
+                <!-- Bronze Package -->
+                <a class="sponsor-card package-bg-bronze p-2 md:p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform" href="https://www.paypal.com/ncp/payment/EWS8F9Z9ZD8R6 ">
+                    <h3 class="text-base md:text-2xl font-bold text-gray-800 mb-1 md:mb-4 flex items-center">
+                        <i class="fas fa-medal text-gray-800 mr-1 md:mr-2"></i>
+                        <span class="border-l-2 border-gray-800 pl-1 md:pl-2">Bronze Package</span>
+                    </h3>
+                    <p class="text-xs md:text-base text-gray-600 mb-1 md:mb-4">Basic benefits including branding and event access.</p>
+                    <button class="btn-bronze text-white py-1 px-2 md:py-2 md:px-4 rounded-full text-xs md:text-sm click-effect">Sponsor Now</button>
+                </a>
+                <!-- Silver Package -->
+                <a class="sponsor-card package-bg-silver p-2 md:p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform" href="https://www.paypal.com/ncp/payment/45483GFBPY4X8 ">
+                    <h3 class="text-base md:text-2xl font-bold text-gray-800 mb-1 md:mb-4 flex items-center">
+                        <i class="fas fa-trophy text-gray-800 mr-1 md:mr-2"></i>
+                        <span class="border-l-2 border-gray-800 pl-1 md:pl-2">Silver Package</span>
+                    </h3>
+                    <p class="text-xs md:text-base text-gray-600 mb-1 md:mb-4">Enhanced benefits including branding and priority event access.</p>
+                    <button class="btn-silver text-gray-800 py-1 px-2 md:py-2 md:px-4 rounded-full text-xs md:text-sm click-effect">Sponsor Now</button>
+                </a>
+                <!-- Gold Package -->
+                <a class="sponsor-card package-bg-gold p-2 md:p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform" href="https://www.paypal.com/ncp/payment/P9F3NBUZMJ6YY">
+                    <h3 class="text-base md:text-2xl font-bold text-gray-800 mb-1 md:mb-4 flex items-center">
+                        <i class="fas fa-award text-gray-800 mr-1 md:mr-2"></i>
+                        <span class="border-l-2 border-gray-800 pl-1 md:pl-2">Gold Package</span>
+                    </h3>
+                    <p class="text-xs md:text-base text-gray-600 mb-1 md:mb-4">Premium benefits including branding and VIP event access.</p>
+                    <button class="btn-gold text-gray-800 py-1 px-2 md:py-2 md:px-4 rounded-full text-xs md:text-sm click-effect">Sponsor Now</button>
+                </a>
+                <!-- Diamond Package -->
+                <a class="sponsor-card package-bg-diamond p-2 md:p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform" href="https://www.paypal.com/ncp/payment/JNG9RRXGE6RGU">
+                    <h3 class="text-base md:text-2xl font-bold text-gray-800 mb-1 md:mb-4 flex items-center">
+                        <i class="fas fa-gem text-gray-800 mr-1 md:mr-2"></i>
+                        <span class="border-l-2 border-gray-800 pl-1 md:pl-2">Diamond Package</span>
+                    </h3>
+                    <p class="text-xs md:text-base text-gray-600 mb-1 md:mb-4">Exclusive benefits including premium branding and VIP access to events.</p>
+                    <button class="btn-diamond text-gray-800 py-1 px-2 md:py-2 md:px-4 rounded-full text-xs md:text-sm click-effect">Sponsor Now</button>
+                </a>
+                <!-- Platinum Package -->
+                <a class="sponsor-card package-bg-platinum p-2 md:p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform" href="https://www.paypal.com/ncp/payment/EYYJATZJ22XPW ">
+                    <h3 class="text-base md:text-2xl font-bold text-gray-800 mb-1 md:mb-4 flex items-center">
+                        <i class="fas fa-star text-gray-800 mr-1 md:mr-2"></i>
+                        <span class="border-l-2 border-gray-800 pl-1 md:pl-2">Platinum Package</span>
+                    </h3>
+                    <p class="text-xs md:text-base text-gray-600 mb-1 md:mb-4">Enhanced benefits including branding and priority access to events.</p>
+                    <button class="btn-platinum text-gray-800 py-1 px-2 md:py-2 md:px-4 rounded-full text-xs md:text-sm click-effect">Sponsor Now</button>
+                </a>
+                
+                <!-- Legendary Package -->
+                <a class="sponsor-card package-bg-legendary p-2 md:p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform" href="https://www.paypal.com/ncp/payment/372VEHD2FY372">
+                    <h3 class="text-base md:text-2xl font-bold text-gray-800 mb-1 md:mb-4 flex items-center">
+                        <i class="fas fa-crown text-gray-800 mr-1 md:mr-2"></i>
+                        <span class="border-l-2 border-gray-800 pl-1 md:pl-2">Legendary Package</span>
+                    </h3>
+                    <p class="text-xs md:text-base text-gray-600 mb-1 md:mb-4">Ultimate benefits including top-tier branding and exclusive event access.</p>
+                    <button class="btn-legendary text-white py-1 px-2 md:py-2 md:px-4 rounded-full text-xs md:text-sm click-effect">Sponsor Now</button>
+                </a>
+            </div>
+        </section>
+        <section class="mb-8 container mx-auto px-4">
+            <hr class="mb-4 border-gray-800">
+            <div class="flex justify-center space-x-4">
+                <a href="index.html" class="btn-gold text-gray-800 py-1 px-2 md:py-2 md:px-4 rounded-full text-xs md:text-sm click-effect">Home</a>
+                <a href="https://www.paypal.com/ncp/payment/KB48EEP9WGL7J" class="btn-gold text-gray-800 py-1 px-2 md:py-2 md:px-4 rounded-full text-xs md:text-sm click-effect">Donate Instead</a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white shadow-md mt-8">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory League. All rights reserved.</p>
+            <div class="space-x-4">
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

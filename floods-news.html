@@ -16,7 +16,7 @@
     </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script src="https://kit.fontawesome.com/e8ddd73fdf.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <style>
@@ -46,6 +46,19 @@
             z-index: 1000;
             background-color: white;
         }
+        .floating-nav {
+            position: fixed;
+            top: 7px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color: #f5e6b9;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 6px 20px; /* Reduced height by 40% */
+            width: calc(100% - 20px); /* Stretching to the edge of the display with minor padding */
+            max-width: calc(100% - 20px); /* Ensuring it doesn't exceed the display width */
+        }
         .active-link {
             position: relative;
         }
@@ -61,14 +74,13 @@
     </style>
 </head>
 <body>
-    <div class="sticky-nav bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="floating-nav">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center"> <!-- Reduced height by 40% -->
             <div class="flex items-center">
-                <a href="index.html"><img alt="Oratory League Logo" class="h-10" src="logo.png"/></a>
+                <a href="index.html"><img alt="Oratory League Logo" class="h-8" src="logo.png"/></a> <!-- Reduced height by 40% -->
                 <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
             </div>
             <nav class="hidden md:flex space-x-4">
-                
                 <a class="text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
                 <a class="text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
                 <a class="text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
@@ -81,7 +93,7 @@
                 </button>
             </div>
         </div>
-        <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+        <nav class="hidden md:hidden bg-[#f5e6b9] shadow-md rounded-b-lg" id="mobile-menu">
             <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
             <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
             <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
@@ -112,9 +124,16 @@ From Oratory League to Botswana; MORE PRESSURE, MORE PRECIOUS! That is how diamo
             <a href="index.html" class="bg-[#ae8300] text-white px-4 py-2 rounded-lg hover:bg-[#965f00]">Go Back to Home</a>
         </section>
     </main>
-    <footer class="bg-white shadow-md mt-8">
-        <div class="container mx-auto px-4 py-4 flex justify-between">
-            <p class="text-[#ae8300]">© 2025 Oratory League. All rights reserved.</p>
+    <footer class="bg-[#f5e6b9] shadow-md mt-8">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory League. All rights reserved.</p>
+            <div class="space-x-4">
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://www.linkedin.com/company/oratory-league/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://www.threads.net/@oratory_league?xmt=AQGzd8u7NZhHVHcB9sbtS4e7FDAHuWHdXiN9Kjrq_Ssn5dE"><i class="fa-brands fa-threads"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://www.instagram.com/oratory_league"><i class="fab fa-instagram"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://x.com/OratoryLeague/"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
         </div>
     </footer>
     <script>

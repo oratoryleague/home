@@ -52,6 +52,21 @@
             z-index: 1000;
             background-color: white;
         }
+        
+        .floating-nav {
+            position: fixed;
+            top: 7px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color: #f5e6b9;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 6px 20px; /* Reduced height by 40% */
+            width: calc(100% - 20px); /* Stretching to the edge of the display with minor padding */
+            max-width: calc(100% - 20px); /* Ensuring it doesn't exceed the display width */
+        }
+        
         .active-link {
             position: relative;
         }

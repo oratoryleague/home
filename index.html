@@ -1,6 +1,5 @@
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Oratory League</title>
@@ -38,11 +37,18 @@
         body {
             font-family: 'Product Sans', sans-serif;
         }
-        .sticky-nav {
-            position: sticky;
-            top: 0;
+        .floating-nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1000;
             background-color: #f5e6b9;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 6px 20px; /* Reduced height by 40% */
+            width: calc(100% - 20px); /* Stretching to the edge of the display with minor padding */
+            max-width: calc(100% - 20px); /* Ensuring it doesn't exceed the display width */
         }
         .marquee-container {
             overflow: hidden;
@@ -110,10 +116,10 @@
     </style>
 </head>
 <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
-    <div class="sticky-nav bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="floating-nav">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center"> <!-- Reduced height by 40% -->
             <div class="flex items-center">
-                <a href="index.html"><img alt="Oratory League Logo" class="h-10" src="logo.png"/></a>
+                <a href="index.html"><img alt="Oratory League Logo" class="h-8" src="logo.png"/></a> <!-- Reduced height by 40% -->
                 <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
             </div>
             <nav class="hidden md:flex space-x-4">
@@ -129,7 +135,7 @@
                 </button>
             </div>
         </div>
-        <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+        <nav class="hidden md:hidden bg-[#f5e6b9] shadow-md rounded-b-lg" id="mobile-menu">
             <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
             <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
             <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
@@ -137,7 +143,7 @@
             <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
         </nav>
     </div>
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 py-8 mt-24">
         <section class="mb-8">
             <img alt="2024 ORATE AFRICA DELEGATION" class="w-full h-64 object-cover rounded-lg mb-4" src="home-banner.png"/>
             <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to Oratory League</h2>
@@ -151,8 +157,8 @@
                         <h3 class="text-3xl font-bold mb-2">Our Inaugural OLC</h3>
                         <p class="text-base md:text-lg mb-4">Be a part of the transformative <strong>Oratory League Championships (OLC) Leg 1</strong> as we strive to reignite the spirit, talent and passion for oratory in the <strong><em>northeast, northwest & central</em></strong> regions. Categories of the championship will be <strong>debate, public speaking, poetry & spelling bee.</strong> Make sure to register now to get to engage with our incredible theme of <strong>Power, Progress & Ethics of Control</strong> at <strong>Masunga SSS</strong> from <strong>16th - 23rd April 2025.</strong></p>
                         <div class="flex flex-wrap gap-2">
-                            <a href="theme-news.html"><button class="bg-white text-[#ae8300] px-4 py-2 rounded-lg click-effect">Theme Details</button></a>
-                            <a href="https://form.jotform.com/250557314348054"><button class="bg-white text-[#ae8300] px-4 py-2 rounded-lg click-effect">Delegation Registration</button></a>
+                            <a href="theme-news.html"><button class="bg-[#f5e6b9] text-[#ae8300] px-4 py-2 rounded-lg click-effect">Theme Details</button></a>
+                            <a href="https://form.jotform.com/250557314348054"><button class="bg-[#f5e6b9] text-[#ae8300] px-4 py-2 rounded-lg click-effect">Delegation Registration</button></a>
                         </div>
                     </div>
                 </div>
@@ -182,19 +188,19 @@
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Upcoming Events</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md">
                     <img alt="OLC Leg 1" class="w-full h-40 object-cover rounded-lg mb-4" src="OLC Leg 1.png"/>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">OLC Leg 1</h3>
                     <p class="text-gray-600 mb-2">Join the upcoming Northern Regional Oratory Championship.</p>
                     <a href="https://form.jotform.com/250557314348054"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Register Now</button></a>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md">
                     <img alt="OLC Leg 2" class="w-full h-40 object-cover rounded-lg mb-4" src="OLC Leg 2.png"/>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">OLC Leg 2</h3>
                     <p class="text-gray-600 mb-2">Join the first Southern Regional Round Oratory Championship, the most anticipated.</p>
                     <a href="olc-leg2.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Learn More</button></a>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md">
                     <img alt="Entrance Exam" class="w-full h-40 object-cover rounded-lg mb-4" src="exam.png"/>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Debate Recruitment Event</h3>
                     <p class="text-gray-600 mb-2">Connect with the league and seize the opportunity to become an orate delegate for the league.</p>
@@ -206,21 +212,21 @@
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Top Debaters</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md flex items-center">
                     <img alt="Ms. Siolwe" class="w-16 h-16 object-cover rounded-full mr-4" src="siolwe.jpg"/>
                     <div>
                         <h3 class="text-xl font-bold text-gray-800">Gracious Theresa Siolwe</h3>
                         <p class="text-gray-600">Rank #1</p>
                     </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md flex items-center">
                     <img alt="Mr. Baaitse" class="w-16 h-16 object-cover rounded-full mr-4" src="baaitse.jpg"/>
                     <div>
                         <h3 class="text-xl font-bold text-gray-800">Leatile King Baaitse</h3>
                         <p class="text-gray-600">Rank #2</p>
                     </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md flex items-center">
                     <img alt="Mr. Modala" class="w-16 h-16 object-cover rounded-full mr-4" src="modala.jpg"/>
                     <div>
                         <h3 class="text-xl font-bold text-gray-800">Asante Aupa Modala</h3>
@@ -232,19 +238,19 @@
         <section class="mb-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Latest News</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md">
                     <img alt="Gaborone Flood Support" class="w-full h-40 object-cover rounded-lg mb-4" src="GABORONE FLOOD SUPPORT.jpg"/>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Our Response To The Floods</h3>
                     <p class="text-gray-600 mb-2">Read about how Oratory League is responding to the recent floods and helping affected communities.</p>
                     <a href="floods-news.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Read More</button></a>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md">
                     <img alt="Debate theme announcement" class="w-full h-40 object-cover rounded-lg mb-4" src="OLC Leg 1.png"/>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Leg 1 Theme Released</h3>
                     <p class="text-gray-600 mb-2">Discover the exciting theme for the upcoming Leg 1 of the Oratory League Championships.</p>
                     <a href="theme-news.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Read More</button></a>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="bg-[#f5e6b9] p-4 rounded-lg shadow-md">
                     <img alt="HMCP Partnership" class="w-full h-40 object-cover rounded-lg mb-4" src="HMCP.jpg"/>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">The League Partners with HMCP</h3>
                     <p class="text-gray-600 mb-2">Learn about the new partnership between the Oratory League and HMCP.</p>

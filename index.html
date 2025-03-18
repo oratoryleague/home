@@ -178,12 +178,18 @@
             100% { transform: translateX(100%); }
         }
         @keyframes slide {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(-50%); }
+          0%, 25% {
+            transform: translateX(0);
+          }
+          50%, 75% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
         }
-        
         .animate-slide {
-            animation: slide 8s ease-in-out infinite;
+            animation: slide 16s ease-in-out infinite;
         }
         
         .impact-carousel:hover .animate-slide {

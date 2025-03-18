@@ -76,9 +76,9 @@
             background-color: #f5e6b9;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 6px 20px; /* Reduced height by 40% */
-            width: calc(100% - 20px); /* Stretching to the edge of the display with minor padding */
-            max-width: calc(100% - 20px); /* Ensuring it doesn't exceed the display width */
+            padding: 6px 20px;
+            width: calc(100% - 20px);
+            max-width: calc(100% - 20px); 
         }
         .marquee-container {
             overflow: hidden;
@@ -268,12 +268,18 @@
     <!-- Keep existing head content intact -->
 <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
     <!-- Preserve existing header/nav -->
-    <div class="video-container">
-        <img src="about-us.jpg"
-        <div class="video-overlay">
-            <h1 class="text-[#f5e6b9] text-6xl md:text-8xl font-bold text-center">
-                Redefining Human Discourse
+    <div class="hero-image-container relative h-screen w-full overflow-hidden">
+        <img src="about-us.jpg" alt="Oratory League Global Network" 
+             class="w-full h-full object-cover object-center"
+             loading="eager">
+        <div class="hero-overlay absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="hero-content absolute bottom-1/3 left-0 right-0 text-center px-4 transform translate-y-1/2">
+            <h1 class="text-4xl md:text-7xl font-bold text-[#f5e6b9] mb-6 drop-shadow-2xl">
+                The New Language<br>of Leadership
             </h1>
+            <p class="text-xl md:text-2xl text-[#f5e6b9] opacity-90 max-w-2xl mx-auto">
+                Where artificial intelligence meets human eloquence to redefine global discourse
+            </p>
         </div>
     </div>
 

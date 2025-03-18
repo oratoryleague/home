@@ -178,21 +178,18 @@
             100% { transform: translateX(100%); }
         }
         @keyframes slide {
-          0%, 25% {
-            transform: translateX(0);
-          }
-          /* Transition to second slide */
-          25.1%, 50% {
-            transform: translateX(-50%); /* Moves halfway (1 slide width) */
-          }
-          /* Second slide visible (pause) */
-          50.1%, 75% {
-            transform: translateX(-50%);
-          }
-          /* Transition back to first slide */
-          75.1%, 100% {
-            transform: translateX(0);
-          }
+            0%, 25% {
+                transform: translateX(0);
+            }
+            25.1%, 50% {
+                transform: translateX(-50%);
+            }
+            50.1%, 75% {
+                transform: translateX(-50%);
+            }
+            75.1%, 100% {
+                transform: translateX(0);
+            }
         }
         .animate-slide {
             animation: slide 16s ease-in-out infinite;
@@ -200,9 +197,13 @@
         .overflow-hidden {
           overflow: hidden;
         }
+
+        .w-1/2 {
+            width: 50%;
+        }
         
         .flex {
-          display: flex;
+            display: flex;
         }
         
         .w-full {
@@ -219,6 +220,7 @@
         
         .impact-carousel-container {
             perspective: 1000px;
+            width: 100%;
         }
         
         .impact-carousel > div {
@@ -424,9 +426,10 @@
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Make An Impact With Us ⭐</h2>
             
             <div class="impact-carousel-container relative h-96 md:h-112">
+                <!-- Animation Container -->
                 <div class="impact-carousel flex animate-slide" style="width: 200%">
                     <!-- Donate Card -->
-                    <div class="w-full flex-shrink-0 h-96 md:h-112 relative overflow-hidden rounded-xl shadow-2xl transform transition-transform duration-1000">
+                    <div class="w-1/2 flex-shrink-0 h-96 md:h-112 relative overflow-hidden rounded-xl shadow-2xl">
                         <div class="absolute inset-0 bg-black/40"></div>
                         <img src="https://home-donate.jpg" 
                              alt="Donate to Oratory League" 
@@ -440,7 +443,7 @@
                                 <p class="text-lg md:text-xl mb-6">Your donation empowers youth debate programs across 8 nations and fuels innovative transformations</p>
                                 <a href="https://www.paypal.com/ncp/payment/KB48EEP9WGL7J" 
                                    class="inline-block bg-[#ae8300]/90 hover:bg-[#ae8300] text-white px-8 py-3 rounded-lg 
-                                          click-effect transition-all duration-300 transform hover:scale-105">
+                                          transition-all duration-300 hover:scale-105">
                                     Donate ➔
                                 </a>
                             </div>
@@ -448,7 +451,7 @@
                     </div>
         
                     <!-- Sponsor Card -->
-                    <div class="w-full flex-shrink-0 h-96 md:h-112 relative overflow-hidden rounded-xl shadow-2xl transform transition-transform duration-1000">
+                    <div class="w-1/2 flex-shrink-0 h-96 md:h-112 relative overflow-hidden rounded-xl shadow-2xl">
                         <div class="absolute inset-0 bg-black/40"></div>
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
                              alt="Sponsor Oratory League" 
@@ -462,7 +465,7 @@
                                 <p class="text-lg md:text-xl mb-6">Align with intellectual leadership across 3 continents, & transform global initiatives</p>
                                 <a href="sponsor.html" 
                                    class="inline-block bg-[#ae8300]/90 hover:bg-[#ae8300] text-white px-8 py-3 rounded-lg 
-                                          click-effect transition-all duration-300 transform hover:scale-105">
+                                          transition-all duration-300 hover:scale-105">
                                     Sponsor ➔
                                 </a>
                             </div>

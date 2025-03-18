@@ -19,6 +19,36 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet"/>
     <style>
+        .core-values-card {
+            background: linear-gradient(145deg, #f5e6b9 0%, #ffffff 100%);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .core-values-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .impact-card {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+        }
+        .country-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .country-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(174,131,0,0.9) 30%, transparent);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        .country-card:hover .country-overlay {
+            transform: translateY(0);
+        }
         .click-effect:active {
             transform: scale(0.95);
         }
@@ -340,9 +370,89 @@
             
             <a href="sponsor.html"><button class="bg-[#ae8300] text-white px-4 py-2 rounded-lg click-effect">Sponsor</button></a>
         </section>
+        <!-- New Core Values Section -->
+        <section class="mb-8">
+            <div class="container mx-auto px-4 py-12">
+                <h2 class="text-3xl font-bold text-[#ae8300] mb-8 text-center">Our Guiding Principles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="core-values-card p-6 rounded-lg text-center">
+                        <i class="fas fa-scale-balanced text-4xl text-[#ae8300] mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Integrity</h3>
+                        <p class="text-gray-600">Ethical discourse and transparent operations at every level</p>
+                    </div>
+                    <div class="core-values-card p-6 rounded-lg text-center">
+                        <i class="fas fa-users text-4xl text-[#ae8300] mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Unison</h3>
+                        <p class="text-gray-600">Collaborative excellence across cultures and disciplines</p>
+                    </div>
+                    <div class="core-values-card p-6 rounded-lg text-center">
+                        <i class="fas fa-gem text-4xl text-[#ae8300] mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Elegance</h3>
+                        <p class="text-gray-600">Sophistication in substance, style, and delivery</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- New Impact Metrics Section -->
+        <section class="mb-8">
+            <div class="container mx-auto px-4 py-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="impact-card p-6 rounded-lg shadow-md">
+                        <div class="text-3xl font-bold text-[#ae8300]">50+</div>
+                        <div class="text-gray-600">Nations Represented</div>
+                    </div>
+                    <div class="impact-card p-6 rounded-lg shadow-md">
+                        <div class="text-3xl font-bold text-[#ae8300]">10k+</div>
+                        <div class="text-gray-600">Trained Orators</div>
+                    </div>
+                    <div class="impact-card p-6 rounded-lg shadow-md">
+                        <div class="text-3xl font-bold text-[#ae8300]">150+</div>
+                        <div class="text-gray-600">Global Events</div>
+                    </div>
+                    <div class="impact-card p-6 rounded-lg shadow-md">
+                        <div class="text-3xl font-bold text-[#ae8300]">100%</div>
+                        <div class="text-gray-600">Ethical Compliance</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
+    <!-- Enhanced Footer (same background color) -->
     <footer class="bg-[#f5e6b9] shadow-md mt-8">
-        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-[#ae8300] font-bold mb-4">About OL</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mission-and-vision.html" class="text-gray-600 hover:text-[#ae8300]">Mission & Vision</a></li>
+                        <li><a href="constitution.html" class="text-gray-600 hover:text-[#ae8300]">Constitution</a></li>
+                        <li><a href="leadership.html" class="text-gray-600 hover:text-[#ae8300]">Leadership</a></li>
+                        <li><a href="history.html" class="text-gray-600 hover:text-[#ae8300]">Our History</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[#ae8300] font-bold mb-4">Membership</h4>
+                    <ul class="space-y-2">
+                        <li><a href="join-ol.html" class="text-gray-600 hover:text-[#ae8300]">Join OL</a></li>
+                        <li><a href="member-benefits.html" class="text-gray-600 hover:text-[#ae8300]">Member Benefits</a></li>
+                        <li><a href="training-programs.html" class="text-gray-600 hover:text-[#ae8300]">Training Programs</a></li>
+                        <li><a href="global-chapters.html" class="text-gray-600 hover:text-[#ae8300]">Global Chapters</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[#ae8300] font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-600 hover:text-[#ae8300]">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-gray-600 hover:text-[#ae8300]">Terms of Service</a></li>
+                        <li><a href="code-of-conduct.html" class="text-gray-600 hover:text-[#ae8300]">Code of Conduct</a></li>
+                        <li><a href="report-misconduct.html" class="text-gray-600 hover:text-[#ae8300]">Report Misconduct</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
             <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory League. All rights reserved.</p>
             <div class="space-x-4">
                 <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118"><i class="fa-brands fa-facebook-f"></i></a>
@@ -351,6 +461,7 @@
                 <a class="text-[#ae8300] hover:text-gray-800" href="https://www.instagram.com/oratory_league"><i class="fab fa-instagram"></i></a>
                 <a class="text-[#ae8300] hover:text-gray-800" href="https://x.com/OratoryLeague/"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
+        </div>
         </div>
     </footer>
     <script>

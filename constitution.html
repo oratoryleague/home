@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Oratory League</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW2CY6M8Q5"></script>
+    <script src="https://kit.fontawesome.com/e8ddd73fdf.js" crossorigin="anonymous"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-NW2CY6M8Q5');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        .core-values-card {
+            background: linear-gradient(145deg, #f5e6b9 0%, #ffffff 100%);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .core-values-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .impact-card {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+        }
+        .country-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .country-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(174,131,0,0.9) 30%, transparent);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        .country-card:hover .country-overlay {
+            transform: translateY(0);
+        }
+        .click-effect:active {
+            transform: scale(0.95);
+        }
+        .active-link {
+            position: relative;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px; 
+            width: 50%;
+            height: 2px;
+            background-color: #ae8300;
+        }
+        body {
+            font-family: 'Product Sans', sans-serif;
+        }
+        .constitution-timeline {
+            position: relative;
+            height: 800px;
+            background: linear-gradient(90deg, #f5e6b9 0%, #ffffff 100%);
+        }
+
+        .timeline-node {
+            position: absolute;
+            width: 300px;
+            padding: 20px;
+            background: rgba(174,131,0,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .governance-hologram {
+            perspective: 1000px;
+            min-height: 600px;
+        }
+
+        .hologram-card {
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+
+        .ai-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            background: url('data-pattern.png');
+        }
+
+        .neural-network {
+            position: relative;
+            height: 500px;
+            background: #0a0a0a;
+            overflow: hidden;
+        }
+        .floating-nav {
+            position: fixed;
+            top: 7px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color: #f5e6b9;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 6px 20px; /* Reduced height by 40% */
+            width: calc(100% - 20px); /* Stretching to the edge of the display with minor padding */
+            max-width: calc(100% - 20px); /* Ensuring it doesn't exceed the display width */
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+        .marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee img {
+            margin-right: 1.5rem;
+            height: 60px;
+            width: auto;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            color: #ae8300;
+            flex-wrap: wrap;
+        }
+        .countdown div {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 70px;
+        }
+        .countdown span {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .countdown-container {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 640px) {
+            .countdown {
+                font-size: 0.75rem;
+            }
+            .countdown div {
+                padding: 0.5rem;
+                min-width: 35px;
+            }
+            .countdown span {
+                font-size: 0.625rem;
+            }
+            .countdown-container {
+                padding: 1rem;
+            }
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            animation: moveLeftToRight 5s ease-in-out infinite;
+        }
+        @keyframes moveLeftToRight {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+        @keyframes slide {
+            0%, 25% {
+                transform: translateX(0);
+            }
+            25.1%, 50% {
+                transform: translateX(-50%);
+            }
+            50.1%, 75% {
+                transform: translateX(-50%);
+            }
+            75.1%, 100% {
+                transform: translateX(0);
+            }
+        }
+        .animate-slide {
+            animation: slide 16s ease-in-out infinite;
+        }
+        .overflow-hidden {
+          overflow: hidden;
+        }
+
+        .w-1/2 {
+            width: 50%;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .w-full {
+          width: 100%;
+        }
+        
+        .flex-shrink-0 {
+          flex-shrink: 0;
+        }
+        
+        .impact-carousel:hover .animate-slide {
+            animation-play-state: paused;
+        }
+        
+        .impact-carousel-container {
+            perspective: 1000px;
+            width: 100%;
+        }
+        
+        .impact-carousel > div {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .impact-carousel:hover > div {
+            transform: translateZ(20px);
+        }
+        
+        .bg-gradient-to-r.from-\[\#f5e6b9\].to-\[\#ae8300\] {
+            background-image: linear-gradient(to right, #f5e6b9, #ae8300);
+        }
+    </style>
+</head>
+<body class="font-roboto" style="background-color: rgba(244,237,218,255);">
+    <div class="floating-nav">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center"> <!-- Reduced height by 40% -->
+            <div class="flex items-center">
+                <a href="index.html"><img alt="Oratory League Logo" class="h-8" src="logo.png"/></a> <!-- Reduced height by 40% -->
+                <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
+                <a class="text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
+                <a class="text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+                <a class="text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+                <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden md:hidden bg-[#f5e6b9] shadow-md rounded-b-lg" id="mobile-menu">
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+        </nav>
+    </div>
+
+</head>
+<body>
+    <!-- Constitution Header -->
+    <section class="quantum-header bg-[#ae8300] text-white py-20">
+        <div class="container mx-auto px-4">
+            <h1 class="text-6xl font-bold mb-8">The Living Constitution</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="ai-pillar">
+                    <div class="neon-glow"></div>
+                    <h3>Article I-XII Codification</h3>
+                    <p>Blockchain-verified constitutional amendments</p>
+                </div>
+                <div class="ai-pillar">
+                    <div class="neon-glow"></div>
+                    <h3>Neural Governance</h3>
+                    <p>AI-assisted constitutional interpretation</p>
+                </div>
+                <div class="ai-pillar">
+                    <div class="neon-glow"></div>
+                    <h3>Holographic Jurisprudence</h3>
+                    <p>3D visualization of legal frameworks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline -->
+    <section class="constitution-timeline">
+        <div class="timeline-node" style="top: 10%; left: 5%">
+            <h4>2025 Founding Principles</h4>
+            <p>Original 14-article framework</p>
+            <button class="ar-button">View in AR</button>
+        </div>
+        
+        <div class="timeline-node" style="top: 18%; left: 25%">
+            <div class="node-year">2028</div>
+            <h4>First Constitutional Amendment</h4>
+            <p>Established AI Governance Protocols</p>
+            <button class="ar-button" data-article="VIII">View Amendment I</button>
+        </div>
+        
+        <div class="timeline-node" style="top: 26%; right: 15%">
+            <div class="node-year">2032</div>
+            <h4>Neural Debate Charter</h4>
+            <p>Integrated brain-computer interfaces into Article IV</p>
+            <button class="ar-button" data-article="IV">View Neuro-Protocols</button>
+        </div>
+        
+        <div class="timeline-node" style="top: 34%; left: 18%">
+            <div class="node-year">2035</div>
+            <h4>Quantum Voting System</h4>
+            <p>Entangled particle-based elections in Article VI</p>
+            <button class="ar-button" data-article="VI">View QVS Docs</button>
+        </div>
+        
+        <div class="timeline-node" style="top: 42%; right: 22%">
+            <div class="node-year">2040</div>
+            <h4>Exoplanetary Expansion</h4>
+            <p>Added Mars Colony Provisions to Article III</p>
+            <button class="ar-button" data-article="III">View Space Clauses</button>
+        </div>
+        
+        <div class="timeline-node" style="top: 50%; left: 30%">
+            <div class="node-year">2047</div>
+            <h4>Holographic Jurisprudence</h4>
+            <p>3D Legal Frameworks in Article IX</p>
+            <button class="ar-button" data-article="IX">View Holograms</button>
+        </div>
+        
+        <div class="timeline-node" style="top: 58%; right: 18%">
+            <div class="node-year">2052</div>
+            <h4>Conscious AI Membership</h4>
+            <p>Amended Article IV to include synthetic members</p>
+            <button class="ar-button" data-article="IV">View AI Rights</button>
+        </div>
+        
+        <div class="timeline-node" style="top: 66%; left: 25%">
+            <div class="node-year">2058</div>
+            <h4>Temporal Debate Clause</h4>
+            <p>Added chrono-ethical provisions to Article XI</p>
+            <button class="ar-button" data-article="XI">View Time Protocols</button>
+        </div>
+        
+        <div class="timeline-node" style="top: 74%; right: 28%">
+            <div class="node-year">2060</div>
+            <h4>Galactic Governance</h4>
+            <p>Interstellar debate protocols in Article XV</p>
+            <button class="ar-button" data-article="XV">View Star Laws</button>
+        </div>
+    </section>
+
+    <!-- Governance Hologram -->
+    <section class="governance-hologram">
+        <div class="hologram-card">
+            <div class="front">
+                <h2>Three Pillars of Power</h2>
+                <div class="pillar-diagram">
+                    <div class="executive-pillar"></div>
+                    <div class="legislative-pillar"></div>
+                    <div class="judicial-pillar"></div>
+                </div>
+            </div>
+            <div class="back">
+                <h3>Deep Governance Analysis</h3>
+                <p>AI-powered constitutional audits</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Constitutional Pillars -->
+    <section class="ai-pillars">
+        <article class="pillar-card">
+            <h3>Article II Expansion</h3>
+            <div class="pillar-content">
+                <p>Mission statement evolution through machine learning</p>
+                <div class="version-slider">
+                    <input type="range" min="2025" max="2050" value="2025">
+                </div>
+            </div>
+        </article>
+        <article class="pillar-card">
+            <div class="neural-glow"></div>
+            <h3>Article V Expansion</h3>
+            <div class="pillar-content">
+                <p>Dynamic governance models through quantum machine learning</p>
+                <div class="governance-visualizer">
+                    <div class="model-selector">
+                        <button class="gov-model active" data-model="democratic">Democratic</button>
+                        <button class="gov-model" data-model="meritocratic">Meritocratic</button>
+                        <button class="gov-model" data-model="neurocollective">Neuro-Collective</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article class="pillar-card">
+            <div class="quantum-pulse"></div>
+            <h3>Article VII Amendments</h3>
+            <div class="pillar-content">
+                <p>Real-time amendment impact simulation engine</p>
+                <div class="simulation-interface">
+                    <div class="ai-predictor">
+                        <span class="prediction-label">Stability Forecast</span>
+                        <div class="prediction-bar" data-confidence="78%"></div>
+                    </div>
+                    <button class="simulate-button" data-article="VII">Run Simulation</button>
+                </div>
+            </div>
+        </article>
+        
+        <article class="pillar-card">
+            <div class="hologram-effect"></div>
+            <h3>Article X Ethics Protocol</h3>
+            <div class="pillar-content">
+                <p>Neural ethical compliance monitoring system</p>
+                <div class="ethics-monitor">
+                    <div class="compliance-meter">
+                        <div class="needle" data-compliance="92"></div>
+                    </div>
+                    <div class="violation-alerts"></div>
+                </div>
+            </div>
+        </article>
+        
+        <article class="pillar-card">
+            <div class="data-stream"></div>
+            <h3>Article XII Enforcement</h3>
+            <div class="pillar-content">
+                <p>Blockchain-powered constitutional compliance network</p>
+                <div class="blockchain-visual">
+                    <div class="chain-links">
+                        <span class="link validated"></span>
+                        <span class="link pending"></span>
+                        <span class="link anomaly"></span>
+                    </div>
+                    <div class="consensus-status">87% Consensus</div>
+                </div>
+            </div>
+        </article>
+        
+        <article class="pillar-card">
+            <div class="neuro-synapses"></div>
+            <h3>Article XV Expansion</h3>
+            <div class="pillar-content">
+                <p>Interstellar debate protocols AI trainer</p>
+                <div class="alien-protocol">
+                    <div class="xeno-communication">
+                        <div class="frequency-slider">
+                            <input type="range" min="3" max="7" value="5" class="galactic-range">
+                        </div>
+                        <button class="test-protocol" data-article="XV">Test Xenolinguistics</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Neural Network Visualization -->
+    <section class="neural-network">
+        <canvas id="constitutionNetwork"></canvas>
+        <div class="node-info"></div>
+    </section>
+
+    <!-- Amendment Engine -->
+    <section class="amendment-engine">
+        <h2>Constitutional AI Builder</h2>
+        <div class="code-editor">
+            <pre><code class="language-constitution">Article {
+    Section: [AI-generated suggestions]
+}</code></pre>
+        </div>
+        <div class="proposal-interface">
+            <button class="quantum-button">Submit Amendment</button>
+        </div>
+    </section>
+  <p class="text-[#ae8300] mb-4 md:mb-0">Please note that this is our digital and mock constitution. The legal constitution of the League is strictly protected by the bylaws.</p>
+
+   <footer class="bg-[#f5e6b9] shadow-md mt-8">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-3 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-[#ae8300] font-bold mb-4">About OL</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mission-and-vision.html" class="text-gray-600 hover:text-[#ae8300]">Mission & Vision</a></li>
+                        <li><a href="constitution.html" class="text-gray-600 hover:text-[#ae8300]">Constitution</a></li>
+                        <li><a href="leadership.html" class="text-gray-600 hover:text-[#ae8300]">Leadership</a></li>
+                        <li><a href="history.html" class="text-gray-600 hover:text-[#ae8300]">Our History</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[#ae8300] font-bold mb-4">Membership</h4>
+                    <ul class="space-y-2">
+                        <li><a href="join-ol.html" class="text-gray-600 hover:text-[#ae8300]">Join OL</a></li>
+                        <li><a href="member-benefits.html" class="text-gray-600 hover:text-[#ae8300]">Member Benefits</a></li>
+                        <li><a href="training-programs.html" class="text-gray-600 hover:text-[#ae8300]">Training Programs</a></li>
+                        <li><a href="global-chapters.html" class="text-gray-600 hover:text-[#ae8300]">Global Chapters</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[#ae8300] font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-600 hover:text-[#ae8300]">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-gray-600 hover:text-[#ae8300]">Terms of Service</a></li>
+                        <li><a href="code-of-conduct.html" class="text-gray-600 hover:text-[#ae8300]">Code of Conduct</a></li>
+                        <li><a href="report-misconduct.html" class="text-gray-600 hover:text-[#ae8300]">Report Misconduct</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <br>
+            <hr>
+            <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory Leaguen Limited. All rights reserved.</p>
+            <div class="space-x-4">
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://www.linkedin.com/company/oratory-league/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://www.threads.net/@oratory_league?xmt=AQGzd8u7NZhHVHcB9sbtS4e7FDAHuWHdXiN9Kjrq_Ssn5dE"><i class="fa-brands fa-threads"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://www.instagram.com/oratory_league"><i class="fab fa-instagram"></i></a>
+                <a class="text-[#ae8300] hover:text-gray-800" href="https://x.com/OratoryLeague/"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

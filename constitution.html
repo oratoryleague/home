@@ -74,17 +74,6 @@
             background: linear-gradient(90deg, #f5e6b9 0%, #ffffff 100%);
         }
 
-        .timeline-node {
-            position: absolute;
-            width: 300px;
-            padding: 20px;
-            background: rgba(174,131,0,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            transition: all 0.5s ease;
-            cursor: pointer;
-        }
-
         .governance-hologram {
             perspective: 1000px;
             min-height: 600px;
@@ -277,6 +266,179 @@
         .bg-gradient-to-r.from-\[\#f5e6b9\].to-\[\#ae8300\] {
             background-image: linear-gradient(to right, #f5e6b9, #ae8300);
         }
+        .quantum-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            perspective: 2000px;
+        }
+
+        .timeline-node {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            transform-style: preserve-3d;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 32px rgba(174, 131, 0, 0.1);
+        }
+
+        .timeline-node:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 15px 45px rgba(174, 131, 0, 0.2);
+        }
+
+        .holographic-text {
+            background: linear-gradient(45deg, #ae8300, #f5e6b9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(174, 131, 0, 0.3);
+        }
+
+        .neural-connection {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .neural-connection::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(174, 131, 0, 0.1),
+                transparent
+            );
+            animation: neuralFlow 3s infinite;
+        }
+
+        @keyframes neuralFlow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .quantum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            grid-auto-flow: dense;
+        }
+
+        .article-card {
+            position: relative;
+            min-height: 300px;
+            border: 1px solid rgba(174, 131, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover {
+            border-color: #ae8300;
+            background: rgba(174, 131, 0, 0.03);
+        }
+
+        .blockchain-visualizer {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 0.5rem;
+            height: 60px;
+        }
+
+        .blockchain-node {
+            background: rgba(174, 131, 0, 0.1);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .blockchain-node.active {
+            background: #ae8300;
+            transform: scaleY(1.2);
+        }
+
+        /* Dynamic Font Scaling */
+        :root {
+            --scale-factor: 1;
+        }
+
+        @media (min-width: 768px) {
+            :root {
+                --scale-factor: 1.15;
+            }
+        }
+
+        .dynamic-text {
+            font-size: calc(1rem * var(--scale-factor));
+        }
+        .data-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: minmax(200px, auto);
+            gap: 1rem;
+            padding: 2rem;
+            background: linear-gradient(45deg, #f5e6b911 0%, #ffffff11 100%);
+        }
+
+        .quantum-cell {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #ae830033;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quantum-cell::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #ae830011,
+                transparent
+            );
+            animation: matrixFlow 8s infinite linear;
+        }
+
+        @keyframes matrixFlow {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(50%); }
+        }
+
+        .temporal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.5rem;
+            font-size: 0.9em;
+        }
+
+        .data-cluster {
+            background: #f5e6b905;
+            border: 1px solid #ae830011;
+            padding: 1rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .hologram-text {
+            text-shadow: 0 0 12px #ae830040;
+            background: linear-gradient(45deg, #ae8300, #f5e6b9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .neural-border {
+            border-image: linear-gradient(45deg, #ae8300, #f5e6b9) 1;
+        }
     </style>
 </head>
 <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
@@ -309,222 +471,133 @@
     </div>
 
 </head>
-<body>
-    <!-- Constitution Header -->
-    <section class="quantum-header bg-[#ae8300] text-white py-20">
-        <div class="container mx-auto px-4">
-            <h1 class="text-6xl font-bold mb-8">The Living Constitution</h1>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="ai-pillar">
-                    <div class="neon-glow"></div>
-                    <h3>Article I-XII Codification</h3>
-                    <p>Blockchain-verified constitutional amendments</p>
+<body class="bg-[#f4edda] font-sans">
+    
+    <!-- Constitutional Core Matrix -->
+    <div class="data-matrix">
+        <!-- Temporal Foundation -->
+        <div class="quantum-cell col-span-2 row-span-2">
+            <h2 class="hologram-text text-2xl font-bold mb-4">Chronological Framework</h2>
+            <div class="temporal-grid">
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">2025 Founding</div>
+                    <div class="text-sm">14-article quantum framework</div>
+                    <div class="text-xs opacity-75 mt-2">Base protocol establishment</div>
                 </div>
-                <div class="ai-pillar">
-                    <div class="neon-glow"></div>
-                    <h3>Neural Governance</h3>
-                    <p>AI-assisted constitutional interpretation</p>
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">2028 Amendment I</div>
+                    <div class="text-sm">AI governance protocols</div>
+                    <div class="text-xs opacity-75 mt-2">Neural integration layer</div>
                 </div>
-                <div class="ai-pillar">
-                    <div class="neon-glow"></div>
-                    <h3>Holographic Jurisprudence</h3>
-                    <p>3D visualization of legal frameworks</p>
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">2032 Neural Charter</div>
+                    <div class="text-sm">Brain-computer interface standard</div>
+                    <div class="text-xs opacity-75 mt-2">Article IV augmentation</div>
+                </div>
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">2035 QVS</div>
+                    <div class="text-sm">Quantum voting system</div>
+                    <div class="text-xs opacity-75 mt-2">Entangled particle elections</div>
+                </div>
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">2040 Exoplanetary</div>
+                    <div class="text-sm">Mars colony provisions</div>
+                    <div class="text-xs opacity-75 mt-2">Article III expansion</div>
+                </div>
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">2047 Holograph IX</div>
+                    <div class="text-sm">3D legal frameworks</div>
+                    <div class="text-xs opacity-75 mt-2">Volumetric jurisprudence</div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Interactive Timeline -->
-    <section class="constitution-timeline">
-        <div class="timeline-node" style="top: 10%; left: 5%">
-            <h4>2025 Founding Principles</h4>
-            <p>Original 14-article framework</p>
-            <button class="ar-button">View in AR</button>
+        <!-- Article Matrix -->
+        <div class="quantum-cell">
+            <h3 class="hologram-text text-xl font-bold mb-3">Article II</h3>
+            <div class="text-sm">Mission evolution protocol</div>
+            <div class="text-xs opacity-75 mt-2">ML-driven adaptation engine</div>
+            <div class="neural-border mt-4 pt-4 border-t">
+                <div class="text-[0.8em]">Current version: 4.2.1</div>
+                <div class="text-[0.7em] opacity-75">Last updated: 2047.08.15</div>
+            </div>
         </div>
-        
-        <div class="timeline-node" style="top: 18%; left: 25%">
-            <div class="node-year">2028</div>
-            <h4>First Constitutional Amendment</h4>
-            <p>Established AI Governance Protocols</p>
-            <button class="ar-button" data-article="VIII">View Amendment I</button>
-        </div>
-        
-        <div class="timeline-node" style="top: 26%; right: 15%">
-            <div class="node-year">2032</div>
-            <h4>Neural Debate Charter</h4>
-            <p>Integrated brain-computer interfaces into Article IV</p>
-            <button class="ar-button" data-article="IV">View Neuro-Protocols</button>
-        </div>
-        
-        <div class="timeline-node" style="top: 34%; left: 18%">
-            <div class="node-year">2035</div>
-            <h4>Quantum Voting System</h4>
-            <p>Entangled particle-based elections in Article VI</p>
-            <button class="ar-button" data-article="VI">View QVS Docs</button>
-        </div>
-        
-        <div class="timeline-node" style="top: 42%; right: 22%">
-            <div class="node-year">2040</div>
-            <h4>Exoplanetary Expansion</h4>
-            <p>Added Mars Colony Provisions to Article III</p>
-            <button class="ar-button" data-article="III">View Space Clauses</button>
-        </div>
-        
-        <div class="timeline-node" style="top: 50%; left: 30%">
-            <div class="node-year">2047</div>
-            <h4>Holographic Jurisprudence</h4>
-            <p>3D Legal Frameworks in Article IX</p>
-            <button class="ar-button" data-article="IX">View Holograms</button>
-        </div>
-        
-        <div class="timeline-node" style="top: 58%; right: 18%">
-            <div class="node-year">2052</div>
-            <h4>Conscious AI Membership</h4>
-            <p>Amended Article IV to include synthetic members</p>
-            <button class="ar-button" data-article="IV">View AI Rights</button>
-        </div>
-        
-        <div class="timeline-node" style="top: 66%; left: 25%">
-            <div class="node-year">2058</div>
-            <h4>Temporal Debate Clause</h4>
-            <p>Added chrono-ethical provisions to Article XI</p>
-            <button class="ar-button" data-article="XI">View Time Protocols</button>
-        </div>
-        
-        <div class="timeline-node" style="top: 74%; right: 28%">
-            <div class="node-year">2060</div>
-            <h4>Galactic Governance</h4>
-            <p>Interstellar debate protocols in Article XV</p>
-            <button class="ar-button" data-article="XV">View Star Laws</button>
-        </div>
-    </section>
 
-    <!-- Governance Hologram -->
-    <section class="governance-hologram">
-        <div class="hologram-card">
-            <div class="front">
-                <h2>Three Pillars of Power</h2>
-                <div class="pillar-diagram">
-                    <div class="executive-pillar"></div>
-                    <div class="legislative-pillar"></div>
-                    <div class="judicial-pillar"></div>
-                </div>
-            </div>
-            <div class="back">
-                <h3>Deep Governance Analysis</h3>
-                <p>AI-powered constitutional audits</p>
+        <div class="quantum-cell">
+            <h3 class="hologram-text text-xl font-bold mb-3">Article V</h3>
+            <div class="text-sm">Dynamic governance models</div>
+            <div class="text-xs opacity-75 mt-2">Quantum machine learning core</div>
+            <div class="neural-border mt-4 pt-4 border-t">
+                <div class="text-[0.8em]">Active modes: 3</div>
+                <div class="text-[0.7em] opacity-75">Meritocratic/Democratic/Neuro</div>
             </div>
         </div>
-    </section>
 
-    <!-- AI Constitutional Pillars -->
-    <section class="ai-pillars">
-        <article class="pillar-card">
-            <h3>Article II Expansion</h3>
-            <div class="pillar-content">
-                <p>Mission statement evolution through machine learning</p>
-                <div class="version-slider">
-                    <input type="range" min="2025" max="2050" value="2025">
+        <div class="quantum-cell row-span-2">
+            <h3 class="hologram-text text-xl font-bold mb-3">Compliance Network</h3>
+            <div class="text-sm">Blockchain verification</div>
+            <div class="text-xs opacity-75 mt-2">Real-time validation</div>
+            <div class="mt-4 space-y-2">
+                <div class="flex justify-between text-[0.8em]">
+                    <span>Consensus:</span>
+                    <span class="text-[#ae8300]">87.4%</span>
+                </div>
+                <div class="flex justify-between text-[0.8em]">
+                    <span>Nodes:</span>
+                    <span class="text-[#ae8300]">14,892</span>
+                </div>
+                <div class="flex justify-between text-[0.8em]">
+                    <span>Last Block:</span>
+                    <span class="text-[#ae8300]">#982137</span>
                 </div>
             </div>
-        </article>
-        <article class="pillar-card">
-            <div class="neural-glow"></div>
-            <h3>Article V Expansion</h3>
-            <div class="pillar-content">
-                <p>Dynamic governance models through quantum machine learning</p>
-                <div class="governance-visualizer">
-                    <div class="model-selector">
-                        <button class="gov-model active" data-model="democratic">Democratic</button>
-                        <button class="gov-model" data-model="meritocratic">Meritocratic</button>
-                        <button class="gov-model" data-model="neurocollective">Neuro-Collective</button>
-                    </div>
-                </div>
-            </div>
-        </article>
-        
-        <article class="pillar-card">
-            <div class="quantum-pulse"></div>
-            <h3>Article VII Amendments</h3>
-            <div class="pillar-content">
-                <p>Real-time amendment impact simulation engine</p>
-                <div class="simulation-interface">
-                    <div class="ai-predictor">
-                        <span class="prediction-label">Stability Forecast</span>
-                        <div class="prediction-bar" data-confidence="78%"></div>
-                    </div>
-                    <button class="simulate-button" data-article="VII">Run Simulation</button>
-                </div>
-            </div>
-        </article>
-        
-        <article class="pillar-card">
-            <div class="hologram-effect"></div>
-            <h3>Article X Ethics Protocol</h3>
-            <div class="pillar-content">
-                <p>Neural ethical compliance monitoring system</p>
-                <div class="ethics-monitor">
-                    <div class="compliance-meter">
-                        <div class="needle" data-compliance="92"></div>
-                    </div>
-                    <div class="violation-alerts"></div>
-                </div>
-            </div>
-        </article>
-        
-        <article class="pillar-card">
-            <div class="data-stream"></div>
-            <h3>Article XII Enforcement</h3>
-            <div class="pillar-content">
-                <p>Blockchain-powered constitutional compliance network</p>
-                <div class="blockchain-visual">
-                    <div class="chain-links">
-                        <span class="link validated"></span>
-                        <span class="link pending"></span>
-                        <span class="link anomaly"></span>
-                    </div>
-                    <div class="consensus-status">87% Consensus</div>
-                </div>
-            </div>
-        </article>
-        
-        <article class="pillar-card">
-            <div class="neuro-synapses"></div>
-            <h3>Article XV Expansion</h3>
-            <div class="pillar-content">
-                <p>Interstellar debate protocols AI trainer</p>
-                <div class="alien-protocol">
-                    <div class="xeno-communication">
-                        <div class="frequency-slider">
-                            <input type="range" min="3" max="7" value="5" class="galactic-range">
-                        </div>
-                        <button class="test-protocol" data-article="XV">Test Xenolinguistics</button>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </section>
-
-    <!-- Neural Network Visualization -->
-    <section class="neural-network">
-        <canvas id="constitutionNetwork"></canvas>
-        <div class="node-info"></div>
-    </section>
-
-    <!-- Amendment Engine -->
-    <section class="amendment-engine">
-        <h2>Constitutional AI Builder</h2>
-        <div class="code-editor">
-            <pre><code class="language-constitution">Article {
-    Section: [AI-generated suggestions]
-}</code></pre>
         </div>
-        <div class="proposal-interface">
-            <button class="quantum-button">Submit Amendment</button>
-        </div>
-    </section>
-  <p class="text-[#ae8300] mb-4 md:mb-0">Please note that this is our digital and mock constitution. The legal constitution of the League is strictly protected by the bylaws.</p>
 
+        <!-- Additional Article Cells -->
+        <div class="quantum-cell">
+            <h3 class="hologram-text text-xl font-bold mb-3">Article VII</h3>
+            <div class="text-sm">Amendment simulation</div>
+            <div class="text-xs opacity-75 mt-2">Impact prediction engine</div>
+            <div class="neural-border mt-4 pt-4 border-t">
+                <div class="text-[0.8em]">Stability forecast: 78.2%</div>
+                <div class="text-[0.7em] opacity-75">Confidence interval: ±3.1%</div>
+            </div>
+        </div>
+
+        <div class="quantum-cell">
+            <h3 class="hologram-text text-xl font-bold mb-3">Article X</h3>
+            <div class="text-sm">Ethics compliance</div>
+            <div class="text-xs opacity-75 mt-2">Neural monitoring system</div>
+            <div class="neural-border mt-4 pt-4 border-t">
+                <div class="text-[0.8em]">Current compliance: 92.6%</div>
+                <div class="text-[0.7em] opacity-75">Last audit: 2047.09.01</div>
+            </div>
+        </div>
+
+        <!-- Governance Structure -->
+        <div class="quantum-cell col-span-2">
+            <h3 class="hologram-text text-xl font-bold mb-4">Governance Matrix</h3>
+            <div class="grid grid-cols-3 gap-4 text-sm">
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">Executive</div>
+                    <div class="text-xs mt-2">Implementation core</div>
+                    <div class="text-[0.7em] opacity-75 mt-1">12 active protocols</div>
+                </div>
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">Legislative</div>
+                    <div class="text-xs mt-2">Amendment engine</div>
+                    <div class="text-[0.7em] opacity-75 mt-1">34 pending proposals</div>
+                </div>
+                <div class="data-cluster">
+                    <div class="text-[#ae8300] font-bold">Judicial</div>
+                    <div class="text-xs mt-2">Compliance network</div>
+                    <div class="text-[0.7em] opacity-75 mt-1">891 active cases</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
    <footer class="bg-[#f5e6b9] shadow-md mt-8">
         <div class="container mx-auto px-4 py-8">
             <div class="grid grid-cols-3 md:grid-cols-3 gap-8">

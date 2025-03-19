@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Memberships | Oratory League</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW2CY6M8Q5"></script>
+  <script src="https://kit.fontawesome.com/e8ddd73fdf.js" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NW2CY6M8Q5');
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Product Sans', sans-serif; background-color: rgba(244,237,218,255); }
+    .floating-nav {
+      position: fixed;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background-color: #f5e6b9;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 6px 20px;
+      width: calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
+    .hero-image-container {
+      position: relative;
+      height: 50vh;
+      width: 100%;
+      overflow: hidden;
+    }
+    .hero-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 30%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #f5e6b9;
+      padding: 20px;
+    }
+    .membership-card {
+      background: rgba(255,255,255,0.9);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .membership-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="floating-nav">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html"><img src="logo.png" alt="Oratory League Logo" class="h-8"/></a>
+        <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
+      </div>
+      <nav class="hidden md:flex space-x-4">
+        <a class="text-gray-600 hover:text-gray-800" href="index.html">Home</a>
+        <a class="text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
+        <a class="text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+        <a class="text-gray-600 hover:text-gray-800" href="our-history.html">Our History</a>
+        <a class="text-gray-600 hover:text-gray-800 active-link" href="memberships.html">Memberships</a>
+        <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+      </nav>
+      <div class="md:hidden">
+        <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <nav class="hidden md:hidden bg-[#f5e6b9] shadow-md rounded-b-lg" id="mobile-menu">
+      <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="index.html">Home</a>
+      <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
+      <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+      <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="our-history.html">Our History</a>
+      <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="memberships.html">Memberships</a>
+      <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-image-container">
+    <img src="membership-banner.jpg" alt="Membership">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">Join Our Community</h1>
+      <p class="mt-4 text-xl">Become a part of a dynamic, elite network of orators and thought leaders.</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+    <!-- Introduction -->
+    <section class="mb-12">
+      <div class="bg-white/90 p-8 rounded-2xl shadow-xl">
+        <h2 class="text-3xl font-bold text-[#ae8300] mb-4">Membership Overview</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Oratory League maintains a highly selective and structured membership system. Rooted in our core values of Integrity, Unison, and Elegance, our membership is designed for individuals who are passionate about debate, public speaking, and intellectual discourse. Whether you are a budding young orator, an experienced professional, or an institution looking to empower its community, we have a membership category for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Membership Categories -->
+    <section class="mb-16">
+      <h2 class="text-4xl font-bold text-center text-[#ae8300] mb-8">Membership Categories</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Junior Membership -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-2">Junior Membership</h3>
+          <p class="text-gray-700 mb-4 text-lg">
+            For individuals aged 13-17, this category introduces young minds to structured debate and oratory. Enjoy access to beginner training sessions, mentorship programs, and exclusive youth events.
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li>Eligibility: 13 to 17 years old</li>
+            <li>Benefits: Training workshops, mentorship, competitions</li>
+          </ul>
+        </div>
+        <!-- General Membership -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-2">General Membership</h3>
+          <p class="text-gray-700 mb-4 text-lg">
+            Open to adults aged 18 and above, General Membership provides advanced training modules, access to national and international competitions, and opportunities for leadership roles within the League.
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li>Eligibility: 18+ years old</li>
+            <li>Benefits: Advanced training, debate competitions, leadership roles</li>
+          </ul>
+        </div>
+        <!-- Professional Membership -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-2">Professional Membership</h3>
+          <p class="text-gray-700 mb-4 text-lg">
+            Tailored for public speakers, debate coaches, and communication experts, this category integrates professional expertise into our programs and provides priority access to exclusive engagements.
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li>Eligibility: Established professionals in communication</li>
+            <li>Benefits: Priority speaking engagements, workshops, certifications</li>
+          </ul>
+        </div>
+        <!-- Honorary Membership -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-2">Honorary Membership</h3>
+          <p class="text-gray-700 mb-4 text-lg">
+            Reserved for individuals with significant contributions in debate, governance, or education, Honorary Members enjoy lifetime status with exclusive invitations and advisory privileges.
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li>Eligibility: Distinguished individuals by invitation</li>
+            <li>Benefits: Lifetime membership, exclusive events</li>
+          </ul>
+        </div>
+        <!-- Institutional Membership -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-2">Institutional Membership</h3>
+          <p class="text-gray-700 mb-4 text-lg">
+            Designed for schools, universities, and research organizations, this membership fosters collaborative growth and offers access to training resources, events, and academic partnerships.
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li>Eligibility: Educational institutions and research centers</li>
+            <li>Benefits: Resource sharing, event participation, academic collaborations</li>
+          </ul>
+        </div>
+        <!-- Corporate Membership -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-2">Corporate Membership</h3>
+          <p class="text-gray-700 mb-4 text-lg">
+            For companies and businesses that value effective communication and leadership, Corporate Membership offers sponsorship opportunities, branding privileges, and tailored training programs.
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li>Eligibility: Companies and corporate entities</li>
+            <li>Benefits: Sponsorship, tailored training, branding opportunities</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Process & Call-to-Action -->
+    <section class="mb-16">
+      <div class="bg-gradient-to-r from-[#ae8300] to-[#f5e6b9] p-8 rounded-2xl shadow-2xl text-center">
+        <h2 class="text-4xl font-bold text-white mb-4">Ready to Join?</h2>
+        <p class="text-white text-lg mb-6">
+          Our membership application process is designed to ensure that every new member shares our passion for excellence in debate and public speaking.
+        </p>
+        <a href="join-ol-apply.html" class="bg-white text-[#ae8300] font-bold px-8 py-3 rounded-full shadow hover:shadow-lg transition duration-300">
+          Apply Now
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5e6b9] shadow-md mt-8">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-3 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">About OL</h4>
+          <ul class="space-y-2">
+            <li><a href="mission-and-vision.html" class="text-gray-600 hover:text-[#ae8300]">Mission & Vision</a></li>
+            <li><a href="constitution.html" class="text-gray-600 hover:text-[#ae8300]">Constitution</a></li>
+            <li><a href="leadership.html" class="text-gray-600 hover:text-[#ae8300]">Leadership</a></li>
+            <li><a href="our-history.html" class="text-gray-600 hover:text-[#ae8300]">Our History</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">Membership</h4>
+          <ul class="space-y-2">
+            <li><a href="join-ol.html" class="text-gray-600 hover:text-[#ae8300]">Join OL</a></li>
+            <li><a href="member-benefits.html" class="text-gray-600 hover:text-[#ae8300]">Member Benefits</a></li>
+            <li><a href="training-programs.html" class="text-gray-600 hover:text-[#ae8300]">Training Programs</a></li>
+            <li><a href="global-chapters.html" class="text-gray-600 hover:text-[#ae8300]">Global Chapters</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="privacy-policy.html" class="text-gray-600 hover:text-[#ae8300]">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="text-gray-600 hover:text-[#ae8300]">Terms of Service</a></li>
+            <li><a href="code-of-conduct.html" class="text-gray-600 hover:text-[#ae8300]">Code of Conduct</a></li>
+            <li><a href="report-misconduct.html" class="text-gray-600 hover:text-[#ae8300]">Report Misconduct</a></li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory League Limited. All rights reserved.</p>
+        <div class="space-x-4">
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.linkedin.com/company/oratory-league/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.threads.net/@oratory_league"><i class="fa-brands fa-threads"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.instagram.com/oratory_league"><i class="fab fa-instagram"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://x.com/OratoryLeague/"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+        document.getElementById("menu-button").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

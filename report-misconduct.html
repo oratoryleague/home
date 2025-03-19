@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Report Misconduct | Oratory League</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW2CY6M8Q5"></script>
+  <script src="https://kit.fontawesome.com/e8ddd73fdf.js" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NW2CY6M8Q5');
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Product Sans', sans-serif;
+      background-color: rgba(244,237,218,255);
+    }
+    .floating-nav {
+      position: fixed;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background-color: #f5e6b9;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 6px 20px;
+      width: calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
+    body {
+      font-family: 'Product Sans', sans-serif;
+      background-color: rgba(244,237,218,255);
+    }
+    .floating-nav {
+      position: fixed;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background-color: #f5e6b9;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 6px 20px;
+      width: calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
+    .hero-image-container {
+      position: relative;
+      height: 50vh;
+      width: 100%;
+      overflow: hidden;
+    }
+    .hero-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.8;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 25%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #f5e6b9;
+      padding: 20px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+    }
+    /* Global Chapters Cards */
+    .chapter-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 1rem;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .chapter-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .chapter-card h3 {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #ae8300;
+      margin-bottom: 0.5rem;
+    }
+    .chapter-card p {
+      font-size: 1.125rem;
+      color: #333;
+      line-height: 1.6;
+    }
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .section-header {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ae8300;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="floating-nav">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html"><img src="logo.png" alt="Oratory League Logo" class="h-8"/></a>
+        <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
+      </div>
+      <nav class="hidden md:flex space-x-4">
+        <a class="text-gray-700 hover:text-gray-900" href="index.html">Home</a>
+        <a class="text-gray-700 hover:text-gray-900" href="sponsor.html">Sponsorships</a>
+        <a class="text-gray-700 hover:text-gray-900" href="resources.html">Resources</a>
+        <a class="text-gray-700 hover:text-gray-900" href="about-us.html">About Us</a>
+        <a class="text-gray-700 hover:text-gray-900" href="contact-us.html">Contact Us</a>
+      </nav>
+      <div class="md:hidden">
+        <button class="text-gray-700 hover:text-gray-900 focus:outline-none" id="menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <nav class="hidden md:hidden bg-[#f5e6b9] shadow-md rounded-b-lg" id="mobile-menu">
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="index.html">Home</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="sponsor.html">Sponsorships</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="resources.html">Resources</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="about-us.html">About Us</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="contact-us.html">Contact Us</a>
+    </nav>
+  </div>
+  <!-- Hero Section -->
+  <div class="hero-image-container">
+    <img src="report-banner.jpg" alt="Report Misconduct">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Report Misconduct</h1>
+      <p>Maintaining Integrity Through Accountable Leadership</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+    <section class="mb-16">
+      <h2 class="section-header">Reporting Process</h2>
+      
+      <div class="chapter-card bg-[#f5e6b9] p-8 mb-8">
+        <p class="text-lg leading-relaxed">
+          The Oratory League maintains strict protocols for addressing misconduct. All reports are treated with utmost confidentiality and investigated by our independent Ethics Committee. Below you'll find our comprehensive reporting framework:
+        </p>
+      </div>
+
+      <div class="chapters-grid">
+        <!-- Reporting Channels -->
+        <div class="chapter-card">
+          <h3><i class="fas fa-envelope mr-2"></i>Primary Reporting</h3>
+          <p>
+            <strong>Email:</strong> ethics@oratoryleague.org<br>
+            <strong>Secure Portal:</strong> <a href="#" class="text-[#ae8300]">OL Ethics Reporting System</a><br>
+            <strong>24/7 Hotline:</strong> +1 (800) 555-OLEC
+          </p>
+        </div>
+
+        <!-- Anonymous Reporting -->
+        <div class="chapter-card">
+          <h3><i class="fas fa-user-secret mr-2"></i>Anonymous Options</h3>
+          <p>
+            Submit reports anonymously through our encrypted portal. All anonymous reports receive equal attention while protecting your identity through secure blockchain technology.
+          </p>
+        </div>
+      </div>
+
+      <!-- Reporting Form -->
+      <section class="mt-12">
+        <div class="chapter-card p-8">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-6">Digital Reporting Form</h3>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-gray-700 mb-2">Your Name (optional)</label>
+                <input type="text" class="w-full p-3 border rounded-lg">
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-2">Contact Email</label>
+                <input type="email" class="w-full p-3 border rounded-lg">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-2">Incident Description</label>
+              <textarea class="w-full p-3 border rounded-lg h-40"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-2">Upload Evidence</label>
+              <input type="file" class="w-full p-3 border rounded-lg">
+              <p class="text-sm text-gray-600 mt-2">Accepted formats: PDF, JPG, MP4, DOC (Max 25MB)</p>
+            </div>
+
+            <button class="bg-[#ae8300] text-white px-8 py-3 rounded-lg hover:bg-[#967000] transition">
+              Submit Report
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Process Timeline -->
+      <section class="mt-12">
+        <h3 class="text-2xl font-bold text-[#ae8300] mb-6">Investigation Process</h3>
+        <div class="chapters-grid">
+          <div class="chapter-card">
+            <h4><i class="fas fa-inbox mr-2"></i>1. Report Receipt</h4>
+            <p>Automatic confirmation within 24 hours with case reference number</p>
+          </div>
+          <div class="chapter-card">
+            <h4><i class="fas fa-search mr-2"></i>2. Preliminary Review</h4>
+            <p>Initial assessment completed within 3-5 business days</p>
+          </div>
+          <div class="chapter-card">
+            <h4><i class="fas fa-balance-scale mr-2"></i>3. Full Investigation</h4>
+            <p>Detailed examination by Ethics Committee (14-30 days)</p>
+          </div>
+          <div class="chapter-card">
+            <h4><i class="fas fa-gavel mr-2"></i>4. Resolution</h4>
+            <p>Final determination communicated to all involved parties</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Confidentiality Assurance -->
+      <section class="mt-12">
+        <div class="chapter-card bg-[#f5e6b9] p-8">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-4">Confidentiality Protections</h3>
+          <ul class="list-disc pl-6 space-y-4">
+            <li>All reports encrypted using military-grade (AES-256) encryption</li>
+            <li>Strict need-to-know access protocol for investigation files</li>
+            <li>Whistleblower protection against retaliation</li>
+            <li>Data retention policy: 7 years post-case resolution</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5e6b9] shadow-md mt-8">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-3 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">About OL</h4>
+          <ul class="space-y-2">
+            <li><a href="mission-and-vision.html" class="text-gray-700 hover:text-[#ae8300]">Mission & Vision</a></li>
+            <li><a href="constitution.html" class="text-gray-700 hover:text-[#ae8300]">Constitution</a></li>
+            <li><a href="leadership.html" class="text-gray-700 hover:text-[#ae8300]">Leadership</a></li>
+            <li><a href="our-history.html" class="text-gray-700 hover:text-[#ae8300]">Our History</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">Membership</h4>
+          <ul class="space-y-2">
+            <li><a href="join-ol.html" class="text-gray-700 hover:text-[#ae8300]">Join OL</a></li>
+            <li><a href="member-benefits.html" class="text-gray-700 hover:text-[#ae8300]">Member Benefits</a></li>
+            <li><a href="training-programs.html" class="text-gray-700 hover:text-[#ae8300]">Training Programs</a></li>
+            <li><a href="global-chapters.html" class="text-gray-700 hover:text-[#ae8300]">Global Chapters</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="privacy-policy.html" class="text-gray-700 hover:text-[#ae8300]">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="text-gray-700 hover:text-[#ae8300]">Terms of Service</a></li>
+            <li><a href="code-of-conduct.html" class="text-gray-700 hover:text-[#ae8300]">Code of Conduct</a></li>
+            <li><a href="report-misconduct.html" class="text-gray-700 hover:text-[#ae8300]">Report Misconduct</a></li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory League Limited. All rights reserved.</p>
+        <div class="space-x-4">
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.linkedin.com/company/oratory-league/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.threads.net/@oratory_league"><i class="fa-brands fa-threads"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.instagram.com/oratory_league"><i class="fab fa-instagram"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://x.com/OratoryLeague/"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+        document.getElementById("menu-button").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

@@ -19,6 +19,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    
     <style>
         .core-values-card {
             background: linear-gradient(145deg, #f5e6b9 0%, #ffffff 100%);
@@ -439,6 +440,46 @@
         .neural-border {
             border-image: linear-gradient(45deg, #ae8300, #f5e6b9) 1;
         }
+         
+        .data-matrix {
+            padding: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    
+        @media (max-width: 640px) {
+            .data-matrix {
+                grid-template-columns: 1fr;
+                padding: 0.5rem;
+            }
+            
+            .quantum-cell.col-span-2 {
+                grid-column: span 1 !important;
+            }
+    
+            .floating-nav {
+                width: calc(100% - 10px);
+                padding: 4px 10px;
+            }
+    
+            .floating-nav img {
+                height: 6vw;
+                min-height: 24px;
+            }
+    
+            .floating-nav span {
+                font-size: 4vw;
+            }
+    
+            footer .grid-cols-3 {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    
+        /* Add box-sizing reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body class="font-roboto" style="background-color: rgba(244,237,218,255);">
@@ -470,8 +511,8 @@
         </nav>
     </div>
 
-</head>
-<body class="bg-[#f4edda] font-sans">
+
+<main class="bg-[#f4edda] font-sans">
     <br><br><br>
     <!-- Constitutional Core Matrix -->
     <div class="data-matrix">
@@ -702,7 +743,7 @@
         </div>
     </div>
 
-</body>
+</main>
    <footer class="bg-[#f5e6b9] shadow-md mt-8">
         <div class="container mx-auto px-4 py-8">
             <div class="grid grid-cols-3 md:grid-cols-3 gap-8">

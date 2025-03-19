@@ -448,8 +448,12 @@
     
         @media (max-width: 640px) {
             .data-matrix {
-                grid-template-columns: 1fr;
-                padding: 0.5rem;
+            grid-template-columns: 1fr;
+            padding: 0.5rem;
+            }
+            
+            .quantum-cell.col-span-2 {
+                grid-column: span 1 !important;
             }
 
         *, *::before, *::after {
@@ -457,7 +461,7 @@
         }
     </style>
 </head>
-<body class="font-roboto" style="background-color: rgba(244,237,218,255);">
+<body style="background-color: rgba(244,237,218,255);">
     <div class="floating-nav">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center"> <!-- Reduced height by 40% -->
             <div class="flex items-center">

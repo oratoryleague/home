@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Member Benefits | Oratory League</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW2CY6M8Q5"></script>
+  <script src="https://kit.fontawesome.com/e8ddd73fdf.js" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NW2CY6M8Q5');
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Glowing animated background */
+    body {
+      font-family: 'Product Sans', sans-serif;
+      background: linear-gradient(135deg, #f5e6b9, #ae8300);
+      background-size: 400% 400%;
+      animation: glowingBackground 10s ease infinite;
+      margin: 0;
+      padding: 0;
+    }
+    @keyframes glowingBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .floating-nav {
+      position: fixed;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background-color: rgba(245,230,185,0.95);
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 6px 20px;
+      width: calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
+    .hero-image-container {
+      position: relative;
+      height: 50vh;
+      width: 100%;
+      overflow: hidden;
+    }
+    .hero-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.8;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 25%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #f5e6b9;
+      padding: 20px;
+    }
+    .membership-card {
+      background: rgba(255,255,255,0.95);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .membership-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .benefits-list li {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+    .section-header {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ae8300;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="floating-nav">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html"><img src="logo.png" alt="Oratory League Logo" class="h-8"/></a>
+        <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
+      </div>
+      <nav class="hidden md:flex space-x-4">
+        <a class="text-gray-700 hover:text-gray-900" href="index.html">Home</a>
+        <a class="text-gray-700 hover:text-gray-900" href="sponsor.html">Sponsorships</a>
+        <a class="text-gray-700 hover:text-gray-900" href="resources.html">Resources</a>
+        <a class="text-gray-700 hover:text-gray-900" href="our-history.html">Our History</a>
+        <a class="text-gray-700 hover:text-gray-900 active-link" href="memberships.html">Memberships</a>
+        <a class="text-gray-700 hover:text-gray-900" href="contact-us.html">Contact Us</a>
+      </nav>
+      <div class="md:hidden">
+        <button class="text-gray-700 hover:text-gray-900 focus:outline-none" id="menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <nav class="hidden md:hidden bg-[#f5e6b9] shadow-md rounded-b-lg" id="mobile-menu">
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="index.html">Home</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="sponsor.html">Sponsorships</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="resources.html">Resources</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="our-history.html">Our History</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900 active-link" href="memberships.html">Memberships</a>
+      <a class="block px-4 py-2 text-gray-700 hover:text-gray-900" href="contact-us.html">Contact Us</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-image-container">
+    <img src="benefits-banner.jpg" alt="Member Benefits">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">Member Benefits</h1>
+      <p class="mt-4 text-xl">Unlock exclusive privileges, networking opportunities, and unparalleled growth.</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+    <!-- Universal Benefits -->
+    <section class="mb-16">
+      <h2 class="section-header text-white">Universal Member Benefits</h2>
+      <div class="bg-white/95 p-8 rounded-2xl shadow-xl">
+        <p class="text-gray-800 text-lg leading-relaxed mb-6">
+          Every member of Oratory League enjoys a set of core benefits designed to foster growth, inspire excellence, and ensure that every voice is heard.
+        </p>
+        <ul class="benefits-list list-disc pl-8 text-gray-700 text-lg">
+          <li><strong>Right to Participation:</strong> Engage actively in debates, workshops, seminars, and community events.</li>
+          <li><strong>Access to Exclusive Information:</strong> Receive timely updates, research publications, and insights from industry leaders.</li>
+          <li><strong>Representation & Voice:</strong> Contribute to decision-making processes and influence the direction of the League.</li>
+          <li><strong>Recognition & Advancement:</strong> Opportunities to earn awards, secure leadership roles, and further professional development.</li>
+          <li><strong>Fair Treatment & Inclusivity:</strong> Operate within a respectful, diverse, and supportive community environment.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Category-Specific Benefits -->
+    <section class="mb-16">
+      <h2 class="section-header text-white">Category-Specific Benefits</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Junior Membership Benefits -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-3"><i class="fa-solid fa-child"></i> Junior Membership</h3>
+          <p class="text-gray-800 text-lg mb-3">
+            Tailored for aspiring young orators aged 13-17, this category offers a nurturing environment with focused debate training, mentorship, and exciting competitions.
+          </p>
+          <ul class="benefits-list list-disc pl-5 text-gray-700 text-lg">
+            <li>Beginner debate and public speaking training</li>
+            <li>Mentorship from experienced members</li>
+            <li>Participation in youth competitions and events</li>
+          </ul>
+        </div>
+        <!-- General Membership Benefits -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-3"><i class="fa-solid fa-users"></i> General Membership</h3>
+          <p class="text-gray-800 text-lg mb-3">
+            Designed for individuals aged 18 and above, this membership provides advanced training, opportunities to participate in national and international competitions, and access to leadership roles.
+          </p>
+          <ul class="benefits-list list-disc pl-5 text-gray-700 text-lg">
+            <li>Advanced training modules and workshops</li>
+            <li>Access to exclusive debate and speaking competitions</li>
+            <li>Opportunities for leadership and networking</li>
+          </ul>
+        </div>
+        <!-- Professional Membership Benefits -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-3"><i class="fa-solid fa-briefcase"></i> Professional Membership</h3>
+          <p class="text-gray-800 text-lg mb-3">
+            For public speakers, debate coaches, and communication experts, this category offers priority access to premium events, certifications, and exclusive professional engagements.
+          </p>
+          <ul class="benefits-list list-disc pl-5 text-gray-700 text-lg">
+            <li>Priority access to speaking engagements and judge panels</li>
+            <li>Exclusive professional development workshops</li>
+            <li>Certification and endorsements to boost your career</li>
+          </ul>
+        </div>
+        <!-- Honorary Membership Benefits -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-3"><i class="fa-solid fa-crown"></i> Honorary Membership</h3>
+          <p class="text-gray-800 text-lg mb-3">
+            Reserved for distinguished individuals who have made significant contributions in debate, governance, or education. Enjoy lifetime membership, exclusive event invitations, and strategic advisory roles.
+          </p>
+          <ul class="benefits-list list-disc pl-5 text-gray-700 text-lg">
+            <li>Lifetime membership with no fees</li>
+            <li>Invitations to prestigious events and galas</li>
+            <li>Advisory and strategic influence within the League</li>
+          </ul>
+        </div>
+        <!-- Institutional Membership Benefits -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-3"><i class="fa-solid fa-building-columns"></i> Institutional Membership</h3>
+          <p class="text-gray-800 text-lg mb-3">
+            For schools, universities, and research institutions aiming to empower their community, this membership provides resource sharing, joint events, and academic collaborations.
+          </p>
+          <ul class="benefits-list list-disc pl-5 text-gray-700 text-lg">
+            <li>Access to training resources and events</li>
+            <li>Collaborative academic and research opportunities</li>
+            <li>Joint organization of competitions and seminars</li>
+          </ul>
+        </div>
+        <!-- Corporate Membership Benefits -->
+        <div class="membership-card">
+          <h3 class="text-2xl font-bold text-[#ae8300] mb-3"><i class="fa-solid fa-briefcase"></i> Corporate Membership</h3>
+          <p class="text-gray-800 text-lg mb-3">
+            For companies that value effective communication and leadership, Corporate Membership offers sponsorship opportunities, branding privileges, and tailored training programs for employees.
+          </p>
+          <ul class="benefits-list list-disc pl-5 text-gray-700 text-lg">
+            <li>Sponsorship and branding opportunities</li>
+            <li>Customized training and development programs</li>
+            <li>Direct access to top-tier oratory talent</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Opportunities -->
+    <section class="mb-16">
+      <h2 class="section-header text-white">Exclusive Opportunities & Growth</h2>
+      <div class="bg-white/95 p-8 rounded-2xl shadow-xl">
+        <p class="text-gray-800 text-lg leading-relaxed mb-6">
+          As a member of Oratory League, you gain access to a world of opportunities designed to accelerate your professional and personal growth. Our initiatives include:
+        </p>
+        <ul class="benefits-list list-disc pl-8 text-gray-700 text-lg">
+          <li><strong>Networking Events:</strong> Regular meet-ups, seminars, and international summits to connect with industry leaders and influential orators.</li>
+          <li><strong>Mentorship Programs:</strong> Pairing emerging talent with seasoned professionals for personalized guidance and career advancement.</li>
+          <li><strong>Leadership Development:</strong> Exclusive training sessions, debates, and workshops aimed at cultivating next-generation leaders.</li>
+          <li><strong>Research & Publications:</strong> Opportunities to contribute to academic journals, policy papers, and innovative debate frameworks.</li>
+          <li><strong>Community Outreach:</strong> Participate in social initiatives and debate-for-peace projects that make a global impact.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5e6b9] shadow-md mt-8">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-3 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">About OL</h4>
+          <ul class="space-y-2">
+            <li><a href="mission-and-vision.html" class="text-gray-700 hover:text-[#ae8300]">Mission & Vision</a></li>
+            <li><a href="constitution.html" class="text-gray-700 hover:text-[#ae8300]">Constitution</a></li>
+            <li><a href="leadership.html" class="text-gray-700 hover:text-[#ae8300]">Leadership</a></li>
+            <li><a href="our-history.html" class="text-gray-700 hover:text-[#ae8300]">Our History</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">Membership</h4>
+          <ul class="space-y-2">
+            <li><a href="join-ol.html" class="text-gray-700 hover:text-[#ae8300]">Join OL</a></li>
+            <li><a href="member-benefits.html" class="text-gray-700 hover:text-[#ae8300]">Member Benefits</a></li>
+            <li><a href="training-programs.html" class="text-gray-700 hover:text-[#ae8300]">Training Programs</a></li>
+            <li><a href="global-chapters.html" class="text-gray-700 hover:text-[#ae8300]">Global Chapters</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-[#ae8300] font-bold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="privacy-policy.html" class="text-gray-700 hover:text-[#ae8300]">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="text-gray-700 hover:text-[#ae8300]">Terms of Service</a></li>
+            <li><a href="code-of-conduct.html" class="text-gray-700 hover:text-[#ae8300]">Code of Conduct</a></li>
+            <li><a href="report-misconduct.html" class="text-gray-700 hover:text-[#ae8300]">Report Misconduct</a></li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-[#ae8300] mb-4 md:mb-0">© 2025 Oratory League Limited. All rights reserved.</p>
+        <div class="space-x-4">
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://web.facebook.com/profile.php?id=61568319160118"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.linkedin.com/company/oratory-league/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.threads.net/@oratory_league"><i class="fa-brands fa-threads"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://www.instagram.com/oratory_league"><i class="fab fa-instagram"></i></a>
+          <a class="text-[#ae8300] hover:text-gray-800" href="https://x.com/OratoryLeague/"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+        document.getElementById("menu-button").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

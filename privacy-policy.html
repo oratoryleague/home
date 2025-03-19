@@ -82,6 +82,11 @@
       margin-bottom: 1rem;
       list-style-type: disc;
     }
+
+    li {
+      color: gray;
+    }
+    
     a {
       color: #ae8300;
       text-decoration: underline;
@@ -111,32 +116,32 @@
 <body>
   <!-- Navbar -->
   <div class="floating-nav">
-    <div class="container mx-auto flex justify-between items-center">
-      <div class="flex items-center">
-        <a href="index.html"><img src="logo.png" alt="Oratory League Logo" class="h-8"/></a>
-        <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
-      </div>
-      <nav class="hidden md:flex">
-        <a href="index.html">Home</a>
-        <a href="sponsor.html">Sponsorships</a>
-        <a href="resources.html">Resources</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
-      </nav>
-      <div class="md:hidden">
-        <button class="text-gray-600 focus:outline-none" id="menu-button">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center"> <!-- Reduced height by 40% -->
+            <div class="flex items-center">
+                <a href="index.html"><img alt="Oratory League Logo" class="h-8" src="logo.png"/></a> <!-- Reduced height by 40% -->
+                <a href="index.html"><span class="text-[#ae8300] text-xl font-bold ml-2">ORATORY LEAGUE</span></a>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
+                <a class="text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
+                <a class="text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+                <a class="text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+                <a class="text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden md:hidden bg-[#f5e6b9] shadow-md rounded-b-lg" id="mobile-menu">
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800 active-link" href="index.html">Home</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="sponsor.html">Sponsorships</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="resources.html">Resources</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="about-us.html">About Us</a>
+            <a class="block px-4 py-2 text-gray-600 hover:text-gray-800" href="contact-us.html">Contact Us</a>
+        </nav>
     </div>
-    <nav class="mobile-menu hidden md:hidden bg-[#f5e6b9] shadow-md rounded-b-lg" id="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="sponsor.html">Sponsorships</a>
-      <a href="resources.html">Resources</a>
-      <a href="about-us.html">About Us</a>
-      <a href="contact-us.html">Contact Us</a>
-    </nav>
-  </div>
 
   <!-- Main Content -->
   <div class="container">
